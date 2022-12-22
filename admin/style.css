@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body {
+    background: rgb(235, 243, 243);
+}
+
+.login {
+    width: 400px;
+    margin: 170px auto;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    background-color: #15be15;
+}
+
+.btn {
+    text-align: center;
+}
+
+/* Reset top and bottom margins from certain elements */
+.login-header,
+.login p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.login-header {
+    background: #15be15;
+    padding: 20px;
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.login-container {
+    background: #0e5619;
+    padding: 12px;
+}
+
+/* Every row inside .login-container is defined with p tags */
+.login p {
+    padding: 12px;
+}
+
+.login input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+}
+
+/* Text fields' focus effect */
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+    border-color: #888;
+}
+
+.login input[type="submit"] {
+    background: #15be15;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login input[type="submit"]:hover {
+    background: #17c;
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+    border-color: #05a;
+}
+
+/* alert semua kompoenen */
+
+.alert {
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0px;
+    background: red;
+    color: white;
+}
+
+.alert-sukses {
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0px;
+    background: rgb(4, 186, 74);
+    color: white;
+
+}
+
+/* navbar */
+.float-left {
+    float: left;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.container {
+    width: 100%;
+    margin-left: 80px;
+
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    background-color: #17c;
+    box-shadow: 0px 5px 15px rgb(196, 196, 196);
+
+    /* agar di scroll tidak ke bawah */
+    position: fixed;
+}
+
+.nav-brand {
+    display: inline-block;
+    padding: 15px 0;
+    margin-right: 16px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+/* jarak antar navbar seperti menu dan lain lain */
+/* 
+.nav-menu li {
+    padding: 0px 10px;
+} */
+
+.nav-menu li a {
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-menu li .dropdown {
+    border: 1px solid black;
+    list-style: none;
+    background-color: #fff;
+    position: absolute;
+    display: none;
+}
+
+
+.navbar h2 {
+    color: white;
+    margin-right: 180px;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+.nav-menu li .dropdown a {
+    color: #aaa;
+}
+
+.nav-menu li:hover .dropdown {
+    display: block;
+}
+
+.nav-menu li:hover {
+    background-color: orange;
+}
+
+
+.nav-menu li a:hover {
+    color: red;
+}
+
+.nav-menu .las {
+    color: white;
+}
+
+/* content */
+
+.contenti {
+    padding: 80px 70px;
+}
+
+.containeri {
+    width: 100%;
+
+}
+
+/* pengguna */
+.box {
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.box-header1 {
+    align-content: center;
+    padding: 16px;
+    color: white;
+    font-size: 25px;
+    align-items: center;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+    background-color: rgb(188, 187, 187);
+}
+
+.box-body1 {
+    margin-top: 10px;
+    padding: 16px;
+
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 26px;
+
+}
+
+.table tr th {
+    background-color: rgb(79, 32, 154);
+    color: white;
+
+}
+
+.table th,
+.table td {
+    border: 1px solid rgb(209, 208, 208);
+    padding: 10px;
+}
+
+.table tr td {
+    text-align: center;
+}
+
+.btnsecondary {
+    background-color: rgb(65, 12, 171);
+    text-decoration: none;
+    padding: 1%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btnsecondary:hover {
+    background-color: orange;
+}
+
+
+.btnprimary {
+    background-color: rgb(7, 127, 39);
+    text-decoration: none;
+    padding: 2% 2%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btnprimary :hover {
+    background-color: orange;
+}
+
+.btndanger {
+    background-color: rgb(196, 10, 10);
+    text-decoration: none;
+    padding: 2% 2%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btndanger :hover {
+    background-color: orange;
+}
+
+.tbl11 {
+    margin: 14px;
+}
+
+form input {
+    width: 180%;
+    padding: 12px 10px;
+    outline: none;
+    border: 1px solid #088178;
+    border-radius: 5px;
+
+}
+
+form label {
+    margin-left: 15px;
+}
+
+.btnsecondary1 {
+    width: 100px;
+
+    background-color: green;
+    text-decoration: none;
+    padding: 4%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+    align-content: center;
+}
+
+.slt11 {
+    width: 180%;
+    padding: 12px 10px;
+    border: 1px solid #088178;
+    border-radius: 5px;
+    margin: 15px 15px;
+
+
+}
+
+.btnsecondary1:hover {
+    background-color: orange;
+}
+
+
+.btnsecondary11 {
+    width: 100px;
+
+    background-color: blue;
+    text-decoration: none;
+    padding: 4%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+    align-content: center;
+}
+
+.btnsecondary11:hover {
+    background-color: orange;
+}
+
+/* cari */
+
+.search {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #05aa4d;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus {
+    color: #05aa4d;
+}
+
+.searchButton {
+    width: 50px;
+    height: 36px;
+    border: 1px solid #05aa4d;
+    background: #05aa4d;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+
+/*Resize the wrap to see the search bar change!*/
+form .wrap {
+    width: 30%;
+
+}
+
+
+
+/* footer */
+footer {
+    background-color: aqua;
+    text-align: center;
+    padding: 1%;
+}
+
+
+/* jurusan-admin */
+
+.table1 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 26px;
+
+}
+
+.table1 tr th {
+    background-color: rgb(79, 32, 154);
+    color: white;
+    padding: 11px;
+
+
+}
+
+.table1 th,
+.table1 td {
+    border: 1px solid rgb(209, 208, 208);
+    text-align: center;
+}
+
+.table tr td {
+    text-align: center;
+}
+
+.btnprimary03 {
+    background-color: rgb(7, 127, 39);
+    text-decoration: none;
+    padding: 4% 8%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btnprimary03 :hover {
+    background-color: orange;
+}
+
+.btndanger03 {
+    background-color: rgb(196, 10, 10);
+    text-decoration: none;
+    padding: 4% 6%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btndanger03 :hover {
+    background-color: orange;
+}
+
+.foto1 {
+    border: 1px solid rgb(218, 218, 218);
+    padding: 5px 5px;
+    margin-left: 20px;
+}

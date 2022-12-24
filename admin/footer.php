@@ -1,5 +1,5 @@
  <footer>
-        <p>Author: iii<br>
+        <p><?= $d ->nama ?><br>
     </footer>
 
 </body>

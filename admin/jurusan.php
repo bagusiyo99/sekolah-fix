@@ -51,7 +51,7 @@
                                 <td><?= $no++?></td>
 					            <td><?php echo $p['nama']; ?></td>
 					            <td><?php echo $p['keterangan']; ?></td>
-					            <td><img src="../gambar/<?php echo $p['gambar'] ?>" width="400" height="140"></td>
+					            <td><img src="../gambar-jurusan/<?php echo $p['gambar'] ?>" width="400" height="140"></td>
                                 <td>
                                     <a href="editjurusan-admin.php?id=<?= $p ['id']?>" class="btnprimary " >Edit</a>
                                     <a href="hpsjurusan.php?idjurusan=<?= $p ['id']?>" class="btndanger" onclick="return confirm ('Yakin ingin Hapus')">Hapus</a>

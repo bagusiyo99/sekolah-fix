@@ -74,7 +74,7 @@ if(isset($_POST ['submit']))
                         echo '<div class="alert">Ukuran file tidak boleh lebih dari 1mb </div>';
 
                         }else{
-                        move_uploaded_file ($tmpname, "../gambar/".$rename);
+                        move_uploaded_file ($tmpname, "../gambar-jurusan/".$rename);
 
 
                         

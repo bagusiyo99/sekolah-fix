@@ -2,12 +2,14 @@
     session_start();
     include '../koneksi.php';
      if(!isset($_SESSION ['status_login'])){
-        echo "<script> window.location = 'login.php?msg=harap login terlebih dahulu' </script>";
+        echo "<script> window.location = '../login.php?msg=harap login terlebih dahulu' </script>";
      }
     
 // mengatur agar edit sesuai jam indonesia
         date_default_timezone_set("Asia/Jakarta");
 
+ $identitas = mysqli_query ($conn, "SELECT * FROM pengaturan ORDER BY id DESC LIMIT 1");
+ $d = mysqli_fetch_object ($identitas);
 
 ?>
 
@@ -18,10 +20,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-
-    <title>Document</title>
+    <link rel="icon" href="../identitas/<?= $d ->favicon ?>">
+    <title>PANEL ADMIN <?= $d ->nama ?></title>
 </head>
 
 <body>
@@ -29,7 +31,7 @@
 
     <div class="navbar">
         <div class="container">
-            <h2 class="nav-brand float-left  "> Nama Sekolah </h2>
+            <h2 class="nav-brand float-left  "> <?= $d ->nama ?></h2>
 
             <ul class="nav-menu float-left ">
                 <li><a href="index-admin.php"> Home </a></li>
@@ -47,9 +49,9 @@
                 <li>
                     <a href="">Pengaturan <i class="las la-sort-down"></i></a>
                     <ul class="dropdown">
-                        <li><a href=""> data Informasi</a></li>
-                        <li><a href=""> Informasi</a></li>
-                        <li><a href=""> Informasi</a></li>
+                        <li><a href="identitas-admin.php"> indentitas sekolah</a></li>
+                        <li><a href="tentang-sekolah.php"> Tentang Sekolaj</a></li>
+                        <li><a href="kepala-sekolah.php"> Sambutan</a></li>
                     </ul>
                 </li>
 

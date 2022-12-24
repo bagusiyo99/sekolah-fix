@@ -44,7 +44,7 @@
                                 <label>Foto </label>
                                 <br>
                                 <br>
-                                <img src ="../gambar/<?=$p->gambar?>" width="300px" class="foto1">
+                                <img src ="../gambar-jurusan/<?=$p->gambar?>" width="300px" class="foto1">
                                 
                                 <input type="hidden" name="gambar2" value="<?= $p -> gambar ?>">
                                 <input type="file" name="gambar" class="slt11" >
@@ -87,14 +87,20 @@ if(isset($_POST ['submit']))
 
                         $allowedtype= array ('png', 'jpg', 'jpeg', 'gift');
 
+                         if(!in_array($formatfile, $allowedtype)){
+                            echo '<div class="alert">format tidak diizinkan </div>';
 
-                        if(file_exists("../gambar/".$_POST['gambar2'])){
+                        }elseif ($filesize > 1000000){
+                        echo '<div class="alert">Ukuran file tidak boleh lebih dari 1mb </div>';
 
-                            unlink ("../gambar/".$_POST['gambar2']);
                         }
+                        if(file_exists("../gambar-jurusan/".$_POST['gambar2'])){
 
-                        move_uploaded_file ($tmpname, "../gambar/".$rename);
-
+                            unlink ("../gambar-jurusan/".$_POST['gambar2']);
+                        }
+                    
+                        move_uploaded_file ($tmpname, "../gambar-jurusan/".$rename);
+                    
                     }else{
                         echo 'user tidak ganti gambar';
 

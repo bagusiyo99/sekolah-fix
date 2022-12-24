@@ -10,7 +10,7 @@
                     Dasboard
                 </div>
                 <div class="box-body1">
-                     <h3> Welcome <?= $_SESSION ['uname']?> di Home ini</h3>
+                     <h3> Welcome <?= $_SESSION ['uname']?> di Home ini <?= $d ->nama ?></h3>
                    
                 </div>
 

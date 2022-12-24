@@ -1,17 +1,5 @@
 <?php include ('header.php'); ?>
 
-<?php
-// mengatur agar edit sesuai jam indonesia
-        date_default_timezone_set("Asia/Jakarta");
-
-        $jurusan = mysqli_query($conn, "SELECT * FROM jurusan WHERE id= '" .$_GET ['id']."' ");
-
-                        if (mysqli_num_rows ($jurusan) == 0){
-                        echo "<script> window.location='jurusan.php' </script>";
-                        }
-        $p = mysqli_fetch_object ($jurusan);
-?>
-
 <div class="contenti">
 
     <div class="containeri">
@@ -19,43 +7,83 @@
         <div class="box">
 
             <div class="box-header1">
-                EDIT JURUSAN
+                identitas sekolah
             </div>
             <div class="box-body1">
+            <?php
+                if(isset($_GET['sukses'])){
+                                echo '<div class="alert-sukses">Tambah Data Berhasil </div>';
+                }
+                ?>
+                <br>
 
- <form action="" method="POST" enctype="multipart/form-data">
+                <form action="" method="POST" enctype="multipart/form-data">
                     <table>
                         <tr>
                             <td>
                                 <label>Nama Lengkap</label>
-                                <input class="tbl11" type="text" name="nama" placeholder="enter your name" value="<?= $p -> nama ?>"  required>
+                                <input class="tbl11" type="text" name="nama" placeholder="enter your name" value="<?= $d -> nama ?>"  required>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <label>Keterangan</label>
-                                <input class="tbl11" type="text" name="keterangan" placeholder="enter your username" value="<?= $p -> keterangan ?>"  required>
+                                <label>Email</label>
+                                <input class="tbl11" type="email" name="email" placeholder="enter your email" value="<?= $d -> email ?>"  required>
+                            </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td>
+                                <label>Telepon</label>
+                                <input class="tbl11" type="text" name="telp" placeholder="enter your email" value="<?= $d -> telepon ?>"  required>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <label>Foto </label>
+                                <label>ALamat</label>
+                                <input class="tbl11" type="text" name="alamat" placeholder="enter your aLamat" value="<?= $d -> alamat ?>"  required>
+                            </td>
+                        </tr>
+
+                        
+                        <tr>
+                            <td>
+                                <label>Google Maps</label>
+                                <input class="tbl11" type="text" name="gmaps" placeholder="enter your email" value="<?= $d -> google_maps ?>"  required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>logo </label>
                                 <br>
                                 <br>
-                                <img src ="gambar/<?=$p->gambar?>" width="300px" class="foto1">
+                                <img src ="../identitas/<?=$d->logo?>" width="300px" class="foto1">
                                 
-                                <input type="hidden" name="gambar2" value="<?= $p -> gambar ?>">
-                                <input type="file" name="gambar" class="slt11" >
+                                <input type="hidden" name="logo_lama" value="<?=$d->logo?>">
+                                <input type="file" name="logo_baru" class="slt11" >
+                                <p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>favicon </label>
+                                <br>
+                                <br>
+                                <img src ="../identitas/<?=$d->favicon ?>" width="300px" class="foto1">
+                                
+                                <input type="hidden" name="favicon_lama" value="<?=$d->favicon ?>">
+                                <input type="file" name="favicon_baru" class="slt11" >
                                 <p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>
                             </td>
                         </tr>
 
                         <tr>
                             <td colspan="2">
-                                <input type="submit"  value="Kembali"  class="btnsecondary11" onclick="window.location = 'jurusan.php'"></input>
-
                                 <input type="submit" name="submit" value="Simpan" class="btnsecondary1">
                             </td>
                         </tr>
@@ -72,45 +100,93 @@ if(isset($_POST ['submit']))
 {
 
                         $nama = addslashes (ucwords( $_POST ['nama']));
-                        $ket = addslashes ( $_POST ['keterangan']);
+                        $email = addslashes ( $_POST ['email']);
+                        $telp = addslashes ( $_POST ['telp']);
+                        $alamat = addslashes ( $_POST ['alamat']);
+                        $gmaps = addslashes ( $_POST ['gmaps']);
                         $currdate = date ('Y-m-d H:i:s');
 
-        if($_FILES['gambar']['name'] != ''){
+        if($_FILES['logo_baru']['name'] != ''){
 
                 // gambar dapet dari name diatas
-                $filename = $_FILES['gambar']['name'];
-                $tmpname = $_FILES['gambar']['tmp_name'];
-                $filesize = $_FILES['gambar']['size'];
+                $filename_logo = $_FILES['logo_baru']['name'];
+                $tmpname_logo = $_FILES['logo_baru']['tmp_name'];
+                $filesize_logo = $_FILES['logo_baru']['size'];
 
-                        $formatfile = pathinfo($filename, PATHINFO_EXTENSION);
-                        $rename = 'jurusan'.time().'.'.$formatfile;
+                        $formatfile_logo = pathinfo($filename_logo, PATHINFO_EXTENSION);
+                        $rename_logo = 'logo'.time().'.'.$formatfile_logo;
 
-                        $allowedtype= array ('png', 'jpg', 'jpeg', 'gift');
+                        $allowedtype_logo = array ('png', 'jpg', 'jpeg', 'gift');
 
-
-                        if(file_exists("gambar/".$_POST['gambar2'])){
-
-                            unlink ("gambar/".$_POST['gambar2']);
+                        if(!in_array($formatfile_logo, $allowedtype_logo)){
+                        echo '<div class ="alert">format file tidak diizinkan.</div>';
+                        return false;
+                    }elseif($filesize_logo > 1000000){
+                        echo '<div class ="alert">ukuran file tidak boleh lebih dari 1 MB.</div>';
+                        return false;
+                    }else{
+                        if(file_exists("../identitas/".$_POST['logo_lama'])){
+                            unlink ("../identitas/".$_POST['logo_lama']);
                         }
 
-                        move_uploaded_file ($tmpname, "gambar/".$rename);
+                        move_uploaded_file ($tmpname_logo, "../identitas/".$rename_logo);
+                    }
+                    
 
                     }else{
                         echo 'user tidak ganti gambar';
 
-                        $rename =$_POST ['gambar2'];
+                        $rename_logo =$_POST ['logo_lama'];
                     }
 
-                                    $update = mysqli_query($conn, "UPDATE  jurusan SET
+                    // menampung data favicon
+        if($_FILES['favicon_baru']['name'] != ''){
+
+                // gambar dapet dari name diatas
+                $filename_favicon = $_FILES['favicon_baru']['name'];
+                $tmpname_favicon = $_FILES['favicon_baru']['tmp_name'];
+                $filesize_favicon = $_FILES['favicon_baru']['size'];
+
+                        $formatfile_favicon = pathinfo($filename_favicon, PATHINFO_EXTENSION);
+                        $rename_favicon = 'favicon'.time().'.'.$formatfile_favicon;
+
+                        $allowedtype_favicon = array ('png', 'jpg', 'jpeg', 'gift');
+
+                        if(!in_array($formatfile_favicon, $allowedtype_favicon)){
+                        echo '<div class ="alert">format file tidak diizinkan.</div>';
+                        return false;
+                    }elseif($filesize_favicon > 1000000){
+                        echo '<div class ="alert">ukuran file tidak boleh lebih dari 1 MB.</div>';
+                        return false;
+                    }else{
+                        if(file_exists("../identitas/".$_POST['favicon_lama'])){
+                            unlink ("../identitas/".$_POST['favicon_lama']);
+                        }
+
+                        move_uploaded_file ($tmpname_favicon, "../identitas/".$rename_favicon);
+                    }
+
+                    }else{
+                        echo 'user tidak ganti gambar';
+
+                        $rename_favicon =$_POST ['favicon_lama'];
+                    }
+
+                                    $update = mysqli_query($conn, "UPDATE  pengaturan SET
                                     nama='".$nama."',
-                                    keterangan ='".$ket."',
-                                    gambar='".$rename."',
+                                    email ='".$email."',
+                                    telepon='".$telp."',
+                                    alamat='".$alamat."',
+                                    google_maps ='".$gmaps."',
+                                    logo='".$rename_logo."',
+                                    favicon='".$rename_favicon."',
                                     updated_at='".$currdate."'
-                                    WHERE id = '".$_GET ['id']."'
+                                    WHERE id = '".$d->id ."'
                                     ");
 
                                     if($update){
-                                    echo "<script> window.location = 'jurusan.php?sukses=Edit Data Berhasil' </script>";
+                                    echo "<script> window.location = 'identitas-admin.php?sukses=Edit Data Berhasil' </script>";
+                                    
                                     }else{
                                         echo 'simpan gagal'.mysqli_error($conn);
                                     }
@@ -131,4 +207,4 @@ if(isset($_POST ['submit']))
 
 </html>
 
-<?php include ('super/footer.php'); ?>
+<?php include ('footer.php'); ?>

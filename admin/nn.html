@@ -168,3 +168,32 @@ $query = "SELECT * FROM pengguna ORDER BY id ASC";
 </body>
 
 </html>
+
+<!-- <div class="section1">
+        <div class="container12">
+            <h3>informasi</h3>
+            <?php
+                            $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC");
+                            if (mysqli_num_rows($informasi)> 0){
+                            while($d =mysqli_fetch_array($informasi)){      
+            ?>
+            <div class="col-4">
+                <div class="thumbnail-box">
+                    <div>
+                        <img  class="thumbnail-img" src="informasi/<?php echo $d['gambar'] ?>">
+                    </div>
+
+                    <div class="thumbnail-text">
+                        <?= $d['judul']?>
+                    </div>
+
+
+
+                </div>
+            </div>
+            <?php }}else{?>
+                tidak ada
+                <?php } ?>
+        </div>
+
+    </div> -->

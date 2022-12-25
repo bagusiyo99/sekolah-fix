@@ -1,40 +1,4 @@
-
-<?php
-    include 'koneksi.php';
-// mengatur agar edit sesuai jam indonesia
-
- $identitas = mysqli_query ($conn, "SELECT * FROM pengaturan ORDER BY id DESC LIMIT 1");
- $d = mysqli_fetch_object ($identitas);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="icon" href="identitas/<?= $d ->favicon ?>">
-    <title>PANEL ADMIN <?= $d ->nama ?></title>
-</head>
-<body>
-    
-<div class="header">
-        <img src="identitas/<?=$d->logo?>">
-        <div>
-            <ul class="header-logo ">
-                <li><a href="index-admin.php"> Home </a></li>
-                <li><a href="pengguna-admin.php">Tentang Sekolah </a></li>
-                <li><a href="jurusan.php">Jurusan </a></li>
-                <li><a href="galeri.php">Galeri</a></li>
-                <li><a href="informasi.php"> Informasi</a></li>
-                <li><a href="informasi.php"> Kontak</a></li>
-            </ul>
-        </div>
-    </div>
-
+<?php include ('header.php'); ?>
     
     <div class="banner">
         <div class="banner-text">
@@ -63,22 +27,22 @@
             <?php
                             $jurusan = mysqli_query ($conn, "SELECT * FROM jurusan ORDER BY id DESC");
                             if (mysqli_num_rows($jurusan)> 0){
-                            while($d =mysqli_fetch_array($jurusan)){      
+                            while($j =mysqli_fetch_array($jurusan)){      
             ?>
             <div class="col-4">
+                            <a href="detail-jurusan.php?id=<?= $j ['id'] ?> " class="thumbnail-link">
                 <div class="thumbnail-box">
                     <div>
-                        <img  class="thumbnail-img" src="gambar-jurusan/<?php echo $d['gambar'] ?>">
+                        <img  class="thumbnail-img" src="gambar-jurusan/<?php echo $j['gambar'] ?>">
                     </div>
 
                     <div class="thumbnail-text">
-                        <?= $d['nama']?>
+                        <?= $j['nama']?>
                     </div>
-
-
 
                 </div>
             </div>
+                            </a>
             <?php }}else{?>
                 tidak ada
                 <?php } ?>
@@ -88,17 +52,33 @@
 
 
 
+    <section id="produk1" class="section-p1">
+        <h1> Kategori Produk </h1>
+        <p> Berbagai Produk Terbaru </p>
+        <div class="pro-produk">
+                  <?php
+                            $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC");
+                            if (mysqli_num_rows($informasi)> 0){
+                            while($e =mysqli_fetch_array($informasi)){      
+            ?>
+            <div class="pro">
+                <a href="detail-informasi.php?id=<?= $e ['id'] ?> " class="thumbnail-link">
+
+                <img  class="thumbnail-img" src="informasi/<?php echo $e['gambar'] ?>">
+                <div class="deskripsi">
+                     <?= substr ($e['judul'], 0,50 )?>
+                   <!-- 50 karakter saja -->
+                </div>
+            </div>
+                                        </a>
+
+                <?php }}else{?>
+                tidak ada
+                <?php } ?>
+            </div>
+    </section>
 
 
 
 
-
-
-
-
-
-
-
-
-</body>
-</html>
+<?php include ('footer.php'); ?>

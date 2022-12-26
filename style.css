@@ -724,3 +724,66 @@ footer {
 .thumbnail-link:hover {
     color: rgb(192, 5, 5);
 }
+
+
+/* ##################    contact.html #################################################################################################################### */
+
+
+#contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#contact-details .details {
+    width: 40%;
+}
+
+#contact-details .details span,
+#form-details form {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#contact-details .details h2,
+#form-details form h2 {
+    font-size: 26px;
+    line-height: 10px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+#contact-details .details li {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+}
+
+#contact-details .details li i {
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#contact-details .map {
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}

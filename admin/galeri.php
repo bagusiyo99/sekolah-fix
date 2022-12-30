@@ -28,7 +28,7 @@
                                 <th>No</th>
                                 <th>Foto</th>
                                 <th>Keterangan</th>
-                                <th>Aksi sisissis</th>
+                                <th>Aksi </th>
                             </tr>
                         </thead>
 
@@ -49,10 +49,11 @@
                             <tr>
                                 <td><?= $no++?></td>
                                 <td><img src="../galeri/<?= $p['foto'] ?>" width="400" height="140"></td>
-					            <td><?= $p['keterangan']; ?></td>
-                                <td>
-                                    <a href="editgaleri-admin.php?id=<?= $p ['id']?>" class="btnprimary " >Edit</a>
-                                    <a href="hpsgaleri-admin.php?idgaleri=<?= $p ['id']?>" class="btndanger" onclick="return confirm ('Yakin ingin Hapus')">Hapus</a>
+					            <td width="400"><?= $p['keterangan']; ?></td>
+                                <td width="100">
+                                    <a href="editgaleri-admin.php?id=<?= $p ['id']?>" ><i class="las la-edit  la-2x lasi"></i> </a>
+                                    <br><br>
+                                    <a href="hpsgaleri-admin.php?idgaleri=<?= $p ['id']?>"><i class="las la-trash-alt  la-2x lasii" onclick="return confirm ('Yakin ingin Hapus')"></i>    </a>
                                 </td>
                             </tr>
                         

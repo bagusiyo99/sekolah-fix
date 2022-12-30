@@ -32,9 +32,9 @@
 
                         <tr>
                             <td colspan="2">
-                                <input type="submit"  value="Kembali"  class="btnsecondary11" onclick="window.location = 'galeri.php'"></input>
+                                <input type="submit"  value="Kembali"  class="btnkembali" onclick="window.location = 'galeri.php'"></input>
 
-                                <input type="submit" name="submit" value="Simpan" class="btnsecondary1">
+                                <input type="submit" name="submit" value="Simpan" class="btnsimpan">
                             </td>
                         </tr>
 

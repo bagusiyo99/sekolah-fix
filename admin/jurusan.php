@@ -50,11 +50,12 @@
                             <tr>
                                 <td><?= $no++?></td>
 					            <td><?php echo $p['nama']; ?></td>
-					            <td><?php echo $p['keterangan']; ?></td>
+					            <td width="400"><?php echo $p['keterangan']; ?></td>
 					            <td><img src="../gambar-jurusan/<?php echo $p['gambar'] ?>" width="400" height="140"></td>
-                                <td>
-                                    <a href="editjurusan-admin.php?id=<?= $p ['id']?>" class="btnprimary " >Edit</a>
-                                    <a href="hpsjurusan.php?idjurusan=<?= $p ['id']?>" class="btndanger" onclick="return confirm ('Yakin ingin Hapus')">Hapus</a>
+                                <td width="100">
+                                    <a href="editjurusan-admin.php?id=<?= $p ['id']?>" ><i class="las la-edit  la-2x lasi"></i> </a>
+                                    <br><br>
+                                    <a href="hpsjurusan.php?idjurusan=<?= $p ['id']?>"><i class="las la-trash-alt  la-2x lasii" onclick="return confirm ('Yakin ingin Hapus')"></i>    </a>
                                 </td>
                             </tr>
                         

@@ -17,13 +17,11 @@
                 ?>
                 <br>
    <form action="" method="POST" enctype="multipart/form-data">
-                    <table>
-                        <tr>
-                            <td>
-                                <label>Nama Lengkap</label>
-                                <input class="tbl11" type="text" name="tentang" placeholder="enter your aLamat" value="<?= $d -> tentang_sekolah ?>" required>
-                            </td>
-                        </tr>
+  
+                        <div class= "form-group">
+                            <label>Tentang Sekolah</label>
+                            <textarea id="mytextarea"  type="text" name="tentang" placeholder="enter your aLamat"> <?= $d ->tentang_sekolah ?> </textarea>
+                        </div>
 
                         <tr>
                             <td>
@@ -41,7 +39,7 @@
 
                         <tr>
                             <td colspan="2">
-                                <input type="submit" name="submit" value="Simpan" class="btnsecondary1">
+                                <input type="submit" name="submit" value="Simpan" class="button-pengaturan">
                             </td>
                         </tr>
 

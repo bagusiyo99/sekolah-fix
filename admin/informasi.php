@@ -29,7 +29,7 @@
                                 <th>Judul</th>
                                 <th>Keterangan</th>
                                 <th>Gambar</th>
-                                <th>Aksi sisissis</th>
+                                <th>Aksi </th>
                             </tr>
                         </thead>
 
@@ -50,12 +50,13 @@
                             <tr>
                                 <td><?= $no++?></td>
                                 <td><?= $p['judul']; ?></td>
-                                <td><?= $p['keterangan']; ?></td>
-                                <td><img src="../informasi/<?= $p['gambar'] ?>" width="400" height="140"></td>
+                                <td width="400"><?= $p['keterangan']; ?> </td>
+                                <td><img src="../informasi/<?= $p['gambar'] ?>" width="300" height="200"></td>
 
-                                <td>
-                                    <a href="editinformasi-admin.php?id=<?= $p ['id']?>" class="btnprimary " >Edit</a>
-                                    <a href="hpsinformasi-admin.php?idinformasi=<?= $p ['id']?>" class="btndanger" onclick="return confirm ('Yakin ingin Hapus')">Hapus</a>
+                                <td width="100">
+                                    <a href="editinformasi-admin.php?id=<?= $p ['id']?>"><i class="las la-edit  la-2x lasi"></i> </a>
+                                    <br><br>
+                                    <a href="hpsinformasi-admin.php?idinformasi=<?= $p ['id']?>"><i class="las la-trash-alt  la-2x lasii" onclick="return confirm ('Yakin ingin Hapus')"></i>    </a>
                                 </td>
                             </tr>
                         

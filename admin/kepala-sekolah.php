@@ -17,46 +17,28 @@
                 ?>
                 <br>
                 <form action="" method="POST" enctype="multipart/form-data">
-                    <table>
-                        <tr>
-                            <td>
-                                <label>Nama </label>
-                                <input class="tbl11" type="text" name="nama" placeholder="enter your aLamat" value="<?= $d ->nama_kepsek ?>" required>
-                            </td>
-                        </tr>
 
+                        <div class= "form-group">
+                            <label>Nama </label>
+                            <textarea  type="text" name="nama" placeholder="enter your aLamat"> <?= $d ->nama_kepsek ?>  </textarea>
 
-                        <tr>
-                            <td>
-                                <label>Sambutan</label>
-                                <br>
-                                <textarea class="tbl11"  type="text" name="sambutan" placeholder="enter your aLamat" value="<?= $d ->sambutan_kepsek ?>" required>  </textarea>
-                            </td>
-                        </tr>
+                        </div>
 
-                        <tr>
-                            <td>
-                                <label>Foto Sekolah </label>
-                                <br>
-                                <br>
-                                <img src="../identitas/<?=$d->foto_kepsek ?>" width="300px" class="foto1">
-
+                        <div class= "form-group">
+                            <label>Foto Sekolah </label>
+                            <img src="../identitas/<?=$d->foto_kepsek ?>" width="300px" class="foto1">
                                 <input type="hidden" name="foto_lama" value="<?=$d->foto_kepsek ?>">
                                 <input type="file" name="foto_baru" class="slt11">
-                                <p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>
-                            </td>
-                        </tr>
+                                                    
+                        </div>
 
-
-                        <tr>
-                            <td colspan="2">
-                                <input type="submit" name="submit" value="Simpan" class="btnsecondary1">
-                            </td>
-                        </tr>
-
-
-
-                    </table>
+                        <div class= "form-group">
+                            <label>Sambutan</label>
+                            <textarea id="mytextarea"  type="text" name="sambutan" placeholder="enter your aLamat" <?= $d ->sambutan_kepsek ?>>  </textarea>
+                        </div>
+                            
+                                <input  type="submit" name="submit" value="Simpan" class="button-pengaturan">
+                    
                 </form>
 
 

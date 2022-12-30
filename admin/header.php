@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="icon" href="../identitas/<?= $d ->favicon ?>">
     <title>PANEL ADMIN <?= $d ->nama ?></title>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous"></script>
+    
+
 </head>
 
 <body>
@@ -68,3 +72,9 @@
             <div class="clearfix"></div>
         </div>
     </div>
+
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>

@@ -61,9 +61,10 @@
                                 <td><?=$p ['nama'] ?></td>
                                 <td><?= $p ['username']?></td>
                                 <td><?= $p ['level']  ?></td>
-                                <td>
-                                    <a href="editpengguna-admin.php?id=<?= $p ['id']?>" class="btnprimary " >Edit</a>
-                                    <a href="hpspengguna-admin.php?idpengguna=<?= $p ['id']?>" class="btndanger" onclick="return confirm ('Yakin ingin Hapus')">Hapus</a>
+                                <td width ="150px">
+                                    <a href="editpengguna-admin.php?id=<?= $p ['id']?>" ><i class="las la-edit  la-2x lasi"></i> </a>
+                                    <br><br>
+                                    <a href="hpspengguna-admin.php?idpengguna=<?= $p ['id']?>"> <i class="las la-trash-alt  la-2x lasii" onclick="return confirm ('Yakin ingin Hapus')"></i>    </a>
                                 </td>
                             </tr>
                         

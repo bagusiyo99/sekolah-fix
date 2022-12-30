@@ -53,8 +53,8 @@
 
                         <tr>
                             <td colspan="2">
-                                <input type="button"  value="Kembali"  class="btnsecondary11" onclick="window.location = 'pengguna-admin.php'"></input>
-                                <input type="submit" name="submit" value="Simpan" class="btnsecondary1">
+                                <input type="button"  value="Kembali"  class="btnkembali" onclick="window.location = 'pengguna-admin.php'"></input>
+                                <input type="submit" name="submit" value="Simpan" class="btnsimpan">
                             </td>
                         </tr>
 

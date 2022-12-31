@@ -19,17 +19,17 @@
         <div class="box">
 
             <div class="box-header1">
-                EDIT galeri
+                EDIT GALERI
             </div>
             <div class="box-body1">
 
- <form action="" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
                     <table>
 
                         <tr>
                             <td>
                                 <label>Keterangan</label>
-                                <input class="tbl11" type="text" name="keterangan" placeholder="enter your username" value="<?= $p -> keterangan ?>"  required>
+                                <input class="tbl11" type="text" name="keterangan" placeholder="keterangan gambar" value="<?= $p -> keterangan ?>"  required>
                             </td>
                         </tr>
 
@@ -56,7 +56,7 @@
 
 
                     </table>
-                </form>
+            </form>
 
 
 <?php

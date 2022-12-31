@@ -50,6 +50,7 @@
                 <li><a href="jurusan.php">Jurusan </a></li>
                 <li><a href="galeri.php">Galeri</a></li>
                 <li><a href="informasi.php"> Informasi</a></li>
+                <li><a href="guru.php"> Guru </a></li>
                 <li>
                     <a href="">Pengaturan <i class="las la-sort-down"></i></a>
                     <ul class="dropdown">

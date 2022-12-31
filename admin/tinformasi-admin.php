@@ -8,7 +8,7 @@
         <div class="box">
 
             <div class="box-header1">
-               Tambah Galeri
+               Tambah Informasi
             </div>
             <div class="box-body1">
 
@@ -17,14 +17,14 @@
                         <tr>
                             <td>
                                 <label>Judul</label>
-                                <input class="tbl11" type="judul" name="judul" placeholder="enter your name" required>
+                                <input class="tbl11" type="judul" name="judul" placeholder="judul informasi" required>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
                                 <label>Keterangan</label>
-                                <input class="tbl11" type="text" name="keterangan" placeholder="enter your username" required>
+                                <input class="tbl11" type="text" name="keterangan" placeholder="keterangan informasi" required>
                             </td>
                         </tr>
 

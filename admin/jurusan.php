@@ -29,7 +29,7 @@
                                 <th>Nama</th>
                                 <th>Keterangan</th>
                                 <th>Gambar</th>
-                                <th>Aksi sisissis</th>
+                                <th>Aksi </th>
                             </tr>
                         </thead>
 

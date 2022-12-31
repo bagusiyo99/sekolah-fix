@@ -7,7 +7,7 @@
             <div class="box">
 
                 <div class="box-header1">
-                        JURUSAN
+                        GALERI
                 </div>
                 <div class="box-body1">
                     <a class="btnsecondary" href="tgaleri-admin.php"> Tambah Data</a>

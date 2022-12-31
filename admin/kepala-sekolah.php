@@ -19,8 +19,8 @@
                 <form action="" method="POST" enctype="multipart/form-data">
 
                         <div class= "form-group">
-                            <label>Nama </label>
-                            <textarea  type="text" name="nama" placeholder="enter your aLamat"> <?= $d ->nama_kepsek ?>  </textarea>
+                            <label>Nama Lengkap</label>
+                            <textarea  type="text" name="nama" placeholder="Nama Lengkap"> <?= $d ->nama_kepsek ?>  </textarea>
 
                         </div>
 

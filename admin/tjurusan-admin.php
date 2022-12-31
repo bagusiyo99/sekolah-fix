@@ -17,14 +17,14 @@
                         <tr>
                             <td>
                                 <label>Nama Lengkap</label>
-                                <input class="tbl11" type="text" name="nama" placeholder="enter your name" required>
+                                <input class="tbl11" type="text" name="nama" placeholder="Nama Lengkap" required>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
                                 <label>Keterangan</label>
-                                <input class="tbl11" type="text" name="keterangan" placeholder="enter your username" required>
+                                <input class="tbl11" type="text" name="keterangan" placeholder="keterangan jurusan" required>
                             </td>
                         </tr>
 

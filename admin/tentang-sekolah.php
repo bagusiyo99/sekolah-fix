@@ -20,7 +20,7 @@
   
                         <div class= "form-group">
                             <label>Tentang Sekolah</label>
-                            <textarea id="mytextarea"  type="text" name="tentang" placeholder="enter your aLamat"> <?= $d ->tentang_sekolah ?> </textarea>
+                            <textarea id="mytextarea"  type="text" name="tentang" placeholder="Tentang Sekolah"> <?= $d ->tentang_sekolah ?> </textarea>
                         </div>
 
                         <tr>

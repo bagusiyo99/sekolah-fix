@@ -29,14 +29,14 @@
                         <tr>
                             <td>
                                 <label>Judul</label>
-                                <input class="tbl11" type="judul" name="judul" placeholder="enter your name"  value="<?= $p -> judul ?>"  required>
+                                <input class="tbl11" type="judul" name="judul" placeholder="judul informasi"  value="<?= $p -> judul ?>"  required>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
                                 <label>Keterangan</label>
-                                <input class="tbl11" type="text" name="keterangan" placeholder="enter your username"  value="<?= $p -> keterangan ?>"  required>
+                                <input class="tbl11" type="text" name="keterangan" placeholder="keterangan informasi"  value="<?= $p -> keterangan ?>"  required>
                             </td>
                         </tr>
                         <tr>

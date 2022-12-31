@@ -7,7 +7,7 @@
             <div class="box">
 
                 <div class="box-header1">
-                        JURUSAN
+                        INFORMASI
                 </div>
                 <div class="box-body1">
                     <a class="btnsecondary" href="tinformasi-admin.php"> Tambah Data</a>

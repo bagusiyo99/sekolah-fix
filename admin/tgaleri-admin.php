@@ -18,7 +18,7 @@
                         <tr>
                             <td>
                                 <label>Keterangan</label>
-                                <input class="tbl11" type="text" name="keterangan" placeholder="enter your username" required>
+                                <input class="tbl11" type="text" name="keterangan" placeholder="keterangan gambar" required>
                             </td>
                         </tr>
 

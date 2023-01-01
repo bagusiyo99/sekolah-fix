@@ -16,7 +16,7 @@
 
             <h3 class="text-center"> <?= $p->nama ?> </h3>
                 <img src="gambar-jurusan/<?php echo $p-> gambar ?>" width="500px" height="400px">
-            <h1 class="text-center">   <?= $p-> keterangan ?> </h1>
+            <h1>   <?= $p-> keterangan ?> </h1>
 
         </div>
 </div>

@@ -20,44 +20,40 @@
     </div>
 
 
-    
-    <div class="section">
-        <div class="container12">
-            <h3>Jurusan</h3>
+    <div class="main">
+            <h3 class="heading">Jurusan</h3>
             <?php
-                            $jurusan = mysqli_query ($conn, "SELECT * FROM jurusan ORDER BY id DESC");
+                            $jurusan = mysqli_query ($conn, "SELECT * FROM jurusan ORDER BY id DESC LIMIT 3");
                             if (mysqli_num_rows($jurusan)> 0){
                             while($j =mysqli_fetch_array($jurusan)){      
             ?>
-            <div class="col-4">
-                            <a href="detail-jurusan.php?id=<?= $j ['id'] ?> " class="thumbnail-link">
-                <div class="thumbnail-box">
-                    <div>
-                        <img  class="thumbnail-img" src="gambar-jurusan/<?php echo $j['gambar'] ?>">
-                    </div>
-
-                    <div class="thumbnail-text">
-                        <?= $j['nama']?>
-                    </div>
-
+        <div class="atur">
+            <div class="card-jurusan">
+                <div class="card-image">
+                    <a href="detail-jurusan.php?id=<?= $j ['id'] ?> ">
+                    <img  class="thumbnail-img" src="gambar-jurusan/<?php echo $j['gambar'] ?>">
+                    </a>
+                </div>
+                <div class="card-description">
+                    <h3><?= $j['nama']?></h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="detail-jurusan.php?id=<?= $j ['id'] ?>" >Read More</a>
                 </div>
             </div>
-                            </a>
+
             <?php }}else{?>
                 tidak ada
                 <?php } ?>
         </div>
-
     </div>
 
-
-
+    
     <section id="produk1" class="section-p1">
         <h1> Kategori Produk </h1>
         <p> Berbagai Produk Terbaru </p>
         <div class="pro-produk">
                   <?php
-                            $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC");
+                            $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC LIMIt 4");
                             if (mysqli_num_rows($informasi)> 0){
                             while($e =mysqli_fetch_array($informasi)){      
             ?>
@@ -83,7 +79,7 @@
         <div class="main">
          <h3 class="heading"><span>Profile </span>Card</h3>
         <?php
-                            $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC");
+                            $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC LIMIT 2");
                             if (mysqli_num_rows($informasi)> 0){
                             while($e =mysqli_fetch_array($informasi)){      
             ?>     
@@ -114,7 +110,7 @@
         <h3 class="heading"><span>Profile </span>Card</h3>
         <div class="container3">
             <?php
-                            $guru = mysqli_query ($conn, "SELECT * FROM guru ORDER BY id DESC");
+                            $guru = mysqli_query ($conn, "SELECT * FROM guru ORDER BY id DESC LIMIT 4");
                             if (mysqli_num_rows($guru)> 0){
                             while($e =mysqli_fetch_array($guru)){      
             ?>    
@@ -124,10 +120,7 @@
                     <h3><?= $e['nama']?></h3>
                     <p><?= substr ($e['mapel'], 0,50 )?></p>
                     <div class="social-links">
-                        <a href="#"><i class="uil uil-facebook-f"></i></a>
-                        <a href=""><i class="uil uil-instagram"></i></a>
-                        <a href=""><i class="uil uil-twitter-alt"></i></a>
-                        <a href=""><i class="uil uil-whatsapp"></i></a>
+                        <a href="#">INFO</a>
                     </div>
                 </div>
             </div>

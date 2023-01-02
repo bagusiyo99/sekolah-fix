@@ -27,15 +27,8 @@
                     <table>
                         <tr>
                             <td>
-                                <label>Nama Lengkap</label>
-                                <input class="tbl11" type="text" name="nama" placeholder="Nama Lengkap" value="<?= $p -> nama ?>"  required>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label>Keterangan</label>
-                                <input class="tbl11" type="text" name="keterangan" placeholder="keterangan jurusan" value="<?= $p -> keterangan ?>"  required>
+                                <label>Jurusan</label>
+                                <input class="tbl11" type="text" name="nama" placeholder="Jurusan" value="<?= $p -> nama ?>"  required>
                             </td>
                         </tr>
 
@@ -47,22 +40,25 @@
                                 <img src ="../gambar-jurusan/<?=$p->gambar?>" width="300px" class="foto1">
                                 
                                 <input type="hidden" name="gambar2" value="<?= $p -> gambar ?>">
-                                <input type="file" name="gambar" class="slt11" >
+                                <input type="file" name="gambar" class="input-foto" >
                                 <p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>
+                                <br><br>
                             </td>
                         </tr>
+
+                    </table>
+                        <div class= "form-group">
+                            <label>Keterangan</label>
+                            <textarea id="mytextarea" type="text" name="keterangan" placeholder="keterangan informasi"  >  <?= $p -> keterangan ?></textarea>
+                        </div>
 
                         <tr>
                             <td colspan="2">
-                                <input type="submit"  value="Kembali"  class="btnkembali" onclick="window.location = 'jurusan.php'"></input>
+                                <input type="submit"  value="Kembali"  class="btnkembali1" onclick="window.location = 'jurusan.php'"></input>
 
-                                <input type="submit" name="submit" value="Simpan" class="btnsimpan">
+                                <input type="submit" name="submit" value="Simpan" class="btnsimpan1">
                             </td>
                         </tr>
-
-
-
-                    </table>
                 </form>
 
 

@@ -48,7 +48,7 @@
                             ?>
                             <tr>
                                 <td><?= $no++?></td>
-                                <td><img src="../galeri/<?= $p['foto'] ?>" width="400" height="140"></td>
+                                <td><img src="../galeri/<?= $p['foto'] ?>" width="400" height="300"></td>
 					            <td width="400"><?= $p['keterangan']; ?></td>
                                 <td width="100">
                                     <a href="editgaleri-admin.php?id=<?= $p ['id']?>" ><i class="las la-edit  la-2x lasi"></i> </a>

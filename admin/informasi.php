@@ -51,7 +51,7 @@
                                 <td><?= $no++?></td>
                                 <td><?= $p['judul']; ?></td>
                                 <td width="400"><?= $p['keterangan']; ?> </td>
-                                <td><img src="../informasi/<?= $p['gambar'] ?>" width="300" height="200"></td>
+                                <td><img src="../informasi/<?= $p['gambar'] ?>" width="300" height="300"></td>
 
                                 <td width="100">
                                     <a href="editinformasi-admin.php?id=<?= $p ['id']?>"><i class="las la-edit  la-2x lasi"></i> </a>

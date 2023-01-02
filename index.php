@@ -47,33 +47,35 @@
         </div>
     </div>
 
-    
-    <section id="produk1" class="section-p1">
-        <h1> Kategori Produk </h1>
-        <p> Berbagai Produk Terbaru </p>
-        <div class="pro-produk">
-                  <?php
-                            $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC LIMIt 4");
-                            if (mysqli_num_rows($informasi)> 0){
-                            while($e =mysqli_fetch_array($informasi)){      
-            ?>
-            <div class="pro">
-                <a href="detail-informasi.php?id=<?= $e ['id'] ?> " class="thumbnail-link">
-
-                <img  class="thumbnail-img" src="informasi/<?php echo $e['gambar'] ?>">
-                <div class="deskripsi">
-                     <?= substr ($e['judul'], 0,50 )?>
-                   <!-- 50 karakter saja -->
+    <div class ="garis">
+        <h3 class="heading1">Jurusan</h3>
+        </div>
+    <section class="info">
+        <div class="main-info">
+            <img src="img/banner/b10.jpg">
+            <div class="tulis">
+                <h4>Manshi</h4>
+                <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
+                <p>Lorem Ipsum has been the industry's standard dummy
+                    text ever since the 1500s, when an unknown printer took
+                    a galley of type and scrambled it to make a type specimen
+                    book. It has survived not only five centuries, but also
+                    the leap into electronic typesetting, remaining essentially
+                    unchanged. It was popularised in the 1960s with the release
+                    of Letraset sheets containing Lorem Ipsum passages, and more
+                    recently with desktop publishing software like Aldus
+                    PageMaker including versions of Lorem Ipsum
+                </p>
+                <div class="btn-info">
+                    
+                    <button type="button">informasi Lebih Lanjut</button>
                 </div>
-            </div>
-                                        </a>
 
-                <?php }}else{?>
-                tidak ada
-                <?php } ?>
             </div>
+        </div>
+      
     </section>
-
+    
 
     <section id="blog">
         <div class="main">

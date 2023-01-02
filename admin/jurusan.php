@@ -26,7 +26,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama</th>
+                                <th>Jurusan</th>
                                 <th>Keterangan</th>
                                 <th>Gambar</th>
                                 <th>Aksi </th>
@@ -51,7 +51,7 @@
                                 <td><?= $no++?></td>
 					            <td><?php echo $p['nama']; ?></td>
 					            <td width="400"><?php echo $p['keterangan']; ?></td>
-					            <td><img src="../gambar-jurusan/<?php echo $p['gambar'] ?>" width="400" height="140"></td>
+					            <td><img src="../gambar-jurusan/<?php echo $p['gambar'] ?>" width="400" height="300"></td>
                                 <td width="100">
                                     <a href="editjurusan-admin.php?id=<?= $p ['id']?>" ><i class="las la-edit  la-2x lasi"></i> </a>
                                     <br><br>

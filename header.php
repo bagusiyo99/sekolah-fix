@@ -22,16 +22,20 @@
 </head>
 <body>
     
-<div class="header">
-        <img src="identitas/<?=$d->logo?>">
-        <div>
-            <ul class="header-logo ">
+ <nav class="navbar1">
+        <a href="" class="logo">LOGO</a>
+        <input type="checkbox" id="toggler">
+        <label for="toggler"> <i class="las la-bars"></i></label>
+        <div class="menu">
+            <ul class="list ">
                 <li><a href="index.php"> Home </a></li>
-                <li><a href="tentang.php">Tentang Sekolah </a></li>
+                <li><a href="tentang.php">Tentang  </a></li>
                 <li><a href="jurusan.php">Jurusan </a></li>
                 <li><a href="galeri.php">Galeri</a></li>
                 <li><a href="informasi1.php"> Informasi</a></li>
                 <li><a href="kontak.php"> Kontak</a></li>
             </ul>
         </div>
-    </div>
+
+    </nav>
+

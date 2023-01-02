@@ -18,6 +18,7 @@
     margin-top: 10px;
     margin-left: 15px;
     align-content: center;
+    outline: none;
 }
 
 .slt11 {
@@ -26,6 +27,15 @@
     border: 1px solid #088178;
     border-radius: 5px;
     margin: 15px 0px;
+
+}
+
+.input-foto {
+    width: 100%;
+    padding: 12px 10px;
+    border: 1px solid #088178;
+    border-radius: 5px;
+    margin: 15px 11px;
 
 }
 
@@ -44,6 +54,27 @@
     margin-top: 10px;
     margin-left: 15px;
     align-content: center;
+    outline: none;
+
+}
+
+.btnkembali1:hover {
+    background-color: orange;
+}
+
+
+.btnkembali1 {
+    width: 100px;
+    background-color: blue;
+    text-decoration: none;
+    padding: 1%;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+    align-content: center;
+    outline: none;
+
 }
 
 
@@ -57,9 +88,29 @@
     border-radius: 5px;
     margin-top: 10px;
     margin-left: 15px;
+    outline: none;
+
 }
 
 .btnsimpan:hover {
+    background-color: orange;
+}
+
+
+.btnsimpan1 {
+    width: 100px;
+    padding: 1%;
+    background-color: green;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+    outline: none;
+
+}
+
+.btnsimpan1:hover {
     background-color: orange;
 }
 
@@ -695,81 +746,6 @@ footer {
     font-size: 16px;
 }
 
-/* informasi */
-#produk1 {
-    text-align: center;
-}
-
-#produk1 .pro-produk {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 5px;
-    flex-wrap: wrap;
-
-}
-
-#produk1 .pro {
-    width: 300px;
-    height: 350px;
-    padding: 10px 12px;
-    border: 1px solid #9c9a9a;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 20px 20px 30px rgba(176, 38, 38, 0.03);
-    margin: 15px 0;
-    transition: 0.2s ease;
-    position: relative;
-
-}
-
-#produk1 .pro img {
-    width: 100%;
-    height: 250px;
-    border-radius: 15px;
-}
-
-#produk1 .pro .deskripsi {
-    text-align: center;
-    padding: 10px 0;
-}
-
-#produk1 .pro span {
-    color: #606063;
-    font-size: 20px;
-    text-align: center;
-
-}
-
-#produk1 .pro .des h5 {
-    color: #1a1a1a;
-    font-size: 20 px;
-    margin: 15px;
-
-}
-
-#produk1 .pro .deskripsi i {
-    font-size: 20px;
-}
-
-.section-p1 {
-    padding: 40px 100px;
-}
-
-#produk1 .pro:hover {
-    box-shadow: 10px 10px 54px rgba(10, 4, 125, 0.1);
-    border: 3px solid cadetblue;
-}
-
-.thumbnail-link {
-    text-decoration: none;
-    color: black;
-}
-
-.thumbnail-link:hover {
-    color: rgb(192, 5, 5);
-}
-
-
 /* ##################    contact.html #################################################################################################################### */
 
 
@@ -1097,4 +1073,258 @@ footer {
 
 .card-image img:hover {
     opacity: 0.8;
+}
+
+/* informasi-user */
+.info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.garis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: pop;
+    padding: 120px 0 20px 0;
+}
+
+.garis .heading1 {
+    font-size: 25px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+
+.heading1::after {
+    content: " ";
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    background-color: rgb(255, 0, 25);
+}
+
+.info .main-info img {
+    display: flex;
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    padding: 0 10px;
+}
+
+.tulis {
+    width: 700px;
+    max-width: 100%;
+    padding: 0 5px;
+}
+
+.main-info {
+    width: 1350px;
+    max-width: 96%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tulis h4 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.tulis h1 {
+    font-size: 30px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.tulis p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.btn-info button {
+    padding: 10px 10px;
+    background-color: green;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 15px;
+    align-content: center;
+    outline: none;
+    border: none;
+
+}
+
+@media screen and (max-width :1250px) {
+
+
+
+    /* informasi */
+    .info {
+        width: 100%;
+        height: auto;
+        padding: 60ppx 0;
+        margin-top: 20px;
+    }
+
+    .tulis {
+        width: 90%;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width :650px) {
+    main-info {
+        width: 100%;
+        height: auto;
+        padding: 60ppx 0;
+        margin-top: 20px;
+    }
+
+    .tulis {
+        width: 90%;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width :400px) {
+    .info {
+        width: 100%;
+        height: auto;
+        padding: 60ppx 0;
+        margin-top: 20px;
+    }
+
+    .tulis {
+        width: 90%;
+        margin-top: 40px;
+    }
+}
+
+/* navbar */
+.navbar1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0px 5px 15px rgb(117, 115, 115);
+
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.navbar1 a {
+    text-decoration: none;
+    color: rgb(14, 14, 14);
+    font-weight: 600;
+
+}
+
+.logo {
+    padding-left: 30px;
+}
+
+
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 45px;
+    padding-right: 115px;
+}
+
+#toggler,
+.navbar1 label {
+    display: none;
+}
+
+.list li a:hover {
+    color: brown;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width :1250px) {
+
+    /* informasi */
+    .info {
+        width: 100%;
+        height: auto;
+        padding: 60px 0;
+        margin-top: 20px;
+    }
+
+    .tulis {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width :650px) {
+
+
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+
+    .list li a:hover {
+        color: brown;
+    }
+
+    .navbar1 label {
+        display: inline-block;
+        align-items: end;
+        cursor: pointer;
+    }
+
+    #toggler:checked~.menu {
+        max-height: 100%;
+    }
+
+
+
+    .info {
+        margin-bottom: 10px;
+    }
 }

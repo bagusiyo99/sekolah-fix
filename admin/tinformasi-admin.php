@@ -21,17 +21,17 @@
                             </td>
                         </tr>
 
-                        <tr>
+                        <!-- <tr>
                             <td>
                                 <label>Keterangan</label>
                                 <input class="tbl11" type="text" name="keterangan" placeholder="keterangan informasi" required>
                             </td>
-                        </tr>
+                        </tr> -->
 
                         <tr>
                             <td>
                                 <label>Foto </label>
-                                <input type="file" name="gambar" class="slt11" required="required">
+                                <input type="file" name="gambar" class="input-foto" required="required">
                                 <p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>
                             </td>
                         </tr>
@@ -43,6 +43,12 @@
                                 <input type="submit" name="submit" value="Simpan" class="btnsimpan">
                             </td>
                         </tr>
+
+                        
+                        <div class= "form-group">
+                            <label>Keterangan</label>
+                            <textarea id="mytextarea"  type="text"  name="keterangan" placeholder="keterangan informasi" required>  </textarea>
+                        </div>
 
 
 

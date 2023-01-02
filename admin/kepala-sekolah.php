@@ -34,7 +34,7 @@
 
                         <div class= "form-group">
                             <label>Sambutan</label>
-                            <textarea id="mytextarea"  type="text" name="sambutan" placeholder="enter your aLamat" <?= $d ->sambutan_kepsek ?>>  </textarea>
+                            <textarea id="mytextarea"  type="text" name="sambutan" placeholder="enter your aLamat" > <?= $d ->sambutan_kepsek ?> </textarea>
                         </div>
                             
                                 <input  type="submit" name="submit" value="Simpan" class="button-pengaturan">

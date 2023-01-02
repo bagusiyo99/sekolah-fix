@@ -47,7 +47,7 @@
                                 <img src ="../guru/<?=$p->gambar?>" width="300px" class="foto1">
                                 
                                 <input type="hidden" name="gambar2" value="<?= $p -> gambar ?>">
-                                <input type="file" name="gambar" class="slt11" >
+                                <input type="file" name="gambar" class="input-foto" >
                                 <p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>
                             </td>
                         </tr>

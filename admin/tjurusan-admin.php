@@ -8,7 +8,7 @@
         <div class="box">
 
             <div class="box-header1">
-                Edit Pengguna
+                Tambah Jurusan
             </div>
             <div class="box-body1">
 
@@ -16,22 +16,21 @@
                     <table>
                         <tr>
                             <td>
-                                <label>Nama Lengkap</label>
-                                <input class="tbl11" type="text" name="nama" placeholder="Nama Lengkap" required>
+                                <label>Jurusan</label>
+                                <input class="tbl11" type="text" name="nama" placeholder="Jurusan" required>
                             </td>
                         </tr>
 
-                        <tr>
-                            <td>
-                                <label>Keterangan</label>
-                                <input class="tbl11" type="text" name="keterangan" placeholder="keterangan jurusan" required>
-                            </td>
-                        </tr>
+                        <div class= "form-group">
+                            <label>Keterangan</label>
+                            <textarea id="mytextarea"  type="text"  name="keterangan" placeholder="keterangan jurusan" required>  </textarea>
+                        </div>
+
 
                         <tr>
                             <td>
                                 <label>Foto </label>
-                                <input type="file" name="gambar" class="slt11" required="required">
+                                <input type="file" name="gambar" class="input-foto" required="required">
                                 <p style="color: red">Ekstensi yang diperbolehkan .png | .jpg | .jpeg | .gif</p>
                             </td>
                         </tr>

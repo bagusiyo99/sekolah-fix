@@ -1,0 +1,52 @@
+    <!-- <div class="section">
+        <div class="container12">
+            <h3>Jurusan</h3>
+            <?php
+                            $jurusan = mysqli_query ($conn, "SELECT * FROM jurusan ORDER BY id DESC");
+                            if (mysqli_num_rows($jurusan)> 0){
+                            while($j =mysqli_fetch_array($jurusan)){      
+            ?>
+            <div class="col-4">
+                <a href="detail-jurusan.php?id=<?= $j ['id'] ?> " class="thumbnail-link">
+                    <div class="thumbnail-box">
+                        <div>
+                            <img class="thumbnail-img" src="gambar-jurusan/<?php echo $j['gambar'] ?>">
+                        </div>
+
+                        <div class="thumbnail-text">
+                            <?= $j['nama']?>
+                        </div>
+
+                    </div>
+            </div>
+            </a>
+            <?php }}else{?>
+            tidak ada
+            <?php } ?>
+        </div>
+
+    </div>
+    </div> -->
+
+    <!-- 
+    <div class="header">
+        <img src="identitas/<?=$d->logo?>">
+        <div>
+            <ul class="header-logo ">
+                <li><a href="index.php"> Home </a></li>
+                <li><a href="tentang.php">Tentang Sekolah </a></li>
+                <li><a href="jurusan.php">Jurusan </a></li>
+                <li><a href="galeri.php">Galeri</a></li>
+                <li><a href="informasi1.php"> Informasi</a></li>
+                <li><a href="kontak.php"> Kontak</a></li>
+            </ul>
+        </div>
+    </div> -->
+
+
+    <!-- <tr>
+        <td>
+            <label>Keterangan</label>
+            <input class="tbl11" type="text" name="keterangan" placeholder="keterangan informasi" value="<?= $p -> keterangan ?>" required>
+        </td>
+    </tr> --> -->

@@ -1,9 +1,11 @@
 <?php include ('header.php'); ?>
+
+
 <div class="section">
-        <div class="container12">
+        <div class="detail-jurusan">
 
     
-            <?php
+           <?php
 
                     $informasi = mysqli_query($conn, "SELECT * FROM informasi WHERE id= '" .$_GET ['id']."' ");
 
@@ -14,11 +16,11 @@
             ?>
             <!-- ngambil di edit jurusan -->
 
-            <h3> <?= $p->judul ?> </h3>
-            <small> DIBUAT PADA <?= date ('d/m/Y', strtotime($p->created_at))  ?> </small>
-            <br>
+            <h3 > <?= $p->judul ?> </h3>
+                <small> DIBUAT PADA <?= date ('d/m/Y', strtotime($p->created_at))  ?> </small>
+                <br> <br>
                 <img src="../informasi/<?php echo $p-> gambar ?>" width="500px" height="400px">
-            <h1 class="text-center">   <?= $p-> keterangan ?> </h1>
+            <p>   <?= $p-> keterangan ?> </p>
 
         </div>
 </div>

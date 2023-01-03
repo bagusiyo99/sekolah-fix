@@ -1,5 +1,5 @@
 <?php include ('header.php'); ?>
-<div class="section">
+<!-- <div class="section">
         <div class="container12">
 
             <h3 class="text-center"> Tentang Sekolah</h3>
@@ -7,7 +7,20 @@
             <h1 class="text-center">   <?= $d-> tentang_sekolah ?> </h1>
 
         </div>
+</div> -->
+
+<div class="section">
+        <div class="detail-tentang">
+
+            <h3 > Tentang Sekolah</h3>
+                <img src="../identitas/<?php echo $d-> foto_sekolah ?>" width="500px" height="400px">
+        </div>
+
 </div>
+
+  <div  class="huruf">
+            <p font-size ="20px"> <?= $d-> tentang_sekolah ?></p>
+        </div>
 
     <div class="main">
         <h3 class="heading">Tenaga Pengajar</h3>

@@ -7,7 +7,7 @@
         <div class="box">
 
             <div class="box-header1">
-                Tentang sekolah
+                Sambutan Kepala sekolah
             </div>
             <div class="box-body1">
             <?php
@@ -17,12 +17,14 @@
                 ?>
                 <br>
                 <form action="" method="POST" enctype="multipart/form-data">
+                        <tr>
+                            <td>
+                                <label>Nama Lengkap</label>
+                                <input class="slt11" type="text" name="nama" placeholder="Jurusan" value="<?= $d -> nama_kepsek ?>"  required>
+                            </td>
+                        </tr>
 
-                        <div class= "form-group">
-                            <label>Nama Lengkap</label>
-                            <textarea  type="text" name="nama" placeholder="Nama Lengkap"> <?= $d ->nama_kepsek ?>  </textarea>
-
-                        </div>
+                        
 
                         <div class= "form-group">
                             <label>Foto Sekolah </label>
@@ -34,6 +36,7 @@
 
                         <div class= "form-group">
                             <label>Sambutan</label>
+                            <br><br>
                             <textarea id="mytextarea"  type="text" name="sambutan" placeholder="enter your aLamat" > <?= $d ->sambutan_kepsek ?> </textarea>
                         </div>
                             
@@ -67,9 +70,9 @@ if(isset($_POST ['submit']))
                         if(!in_array($formatfile, $allowedtype)){
                         echo '<div class ="alert">format file tidak diizinkan.</div>';
                         return false;
-                    }elseif($filesize > 1000000){
-                        echo '<div class ="alert">ukuran file tidak boleh lebih dari 1 MB.</div>';
-                        return false;
+                    // }elseif($filesize > 1000000){
+                    //     echo '<div class ="alert">ukuran file tidak boleh lebih dari 1 MB.</div>';
+                    //     return false;
                     }else{
                         if(file_exists("../identitas/".$_POST['foto_lama'])){
                             unlink ("../identitas/".$_POST['foto_lama']);

@@ -60,7 +60,7 @@
 
 .banner {
     padding: 0px 80px;
-    background-image: url("../identitas/sekolah1671853419.png");
+    background-image: url("../identitas/sekolah1672747364.jpg");
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -76,7 +76,7 @@
 }
 
 .banner-text h3 {
-    font-size: 35px;
+    font-size: 45px;
     padding-bottom: 5px;
 }
 
@@ -96,7 +96,7 @@
     content: "";
     display: block;
     width: 100px;
-    border: 2px solid red;
+    border: 1px solid red;
     position: absolute;
     bottom: 0;
     left: calc(50% - 50px);
@@ -122,6 +122,29 @@
     margin-top: 30px;
 }
 
+.detail-tentang p {
+    text-align: center;
+    margin-left: 70px;
+    width: 50%;
+    margin-top: 30px;
+}
+
+
+/* tentang-sekolah user */
+.huruf {
+    font-size: 50px;
+
+    padding: 0px 100px;
+    text-align: justify;
+}
+
+
+.huruf p {
+    font-size: 17px;
+
+}
+
+/* 
 .col-4 {
     min-height: 200px;
     width: 25%;
@@ -167,7 +190,7 @@
     width: 100%;
     box-sizing: border-box;
     font-size: 16px;
-}
+} */
 
 /* ##################    contact.html #################################################################################################################### */
 
@@ -532,11 +555,15 @@
     background-color: rgb(255, 0, 25);
 }
 
+.info {
+    margin-bottom: 90px;
+}
+
 .info .main-info img {
     display: flex;
     width: 600px;
     max-width: 100%;
-    height: auto;
+    height: 400px;
     padding: 0 10px;
 }
 
@@ -762,6 +789,7 @@
 @media screen and (max-width :650px) {
 
 
+
     .menu {
         width: 100%;
         max-height: 0;
@@ -796,5 +824,12 @@
 
     .info {
         margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width :350px) {
+    .huruf {
+        display: block;
+        padding: 10px;
     }
 }

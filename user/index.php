@@ -8,7 +8,7 @@
     </div>
 
 
-
+<!-- 
     <div class="section">
         <div class="container12 ">
             <h3>Sambutan Kepala Sekolah</h3>
@@ -17,8 +17,30 @@
             <p> <?= $d ->sambutan_kepsek ?></p>
         </div>
 
-    </div>
+    </div> -->
 
+        <div class ="garis">
+        <h3 class="heading1">Tentang</h3>
+        </div>
+    <section class="info">
+        <div class="main-info">
+            <!-- <img src="../img/aset/sekolah.jpg"> -->
+            <img src="../identitas/<?=$d->foto_kepsek?>" height="300px">
+
+            <div class="tulis">
+                <h4><?= $d ->nama_kepsek ?></h4>
+                <h1>SMKN BAGUS BANDAR LAMPUNG</h1>
+                <p><?= $d ->sambutan_kepsek ?>
+                </p>
+                <div class="btn-info">
+                    
+                    <button type="button">informasi Lebih Lanjut</button>
+                </div>
+
+            </div>
+        </div>
+      
+    </section>
 
 
     <div class="main">
@@ -50,35 +72,33 @@
         </div>
     </div>
 
-    
-    <div class ="garis">
-        <h3 class="heading1">Tentang</h3>
-        </div>
-    <section class="info">
-        <div class="main-info">
-            <img src="../img/banner/b10.jpg">
-            <div class="tulis">
-                <h4>Manshi</h4>
-                <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1>
-                <p>Lorem Ipsum has been the industry's standard dummy
-                    text ever since the 1500s, when an unknown printer took
-                    a galley of type and scrambled it to make a type specimen
-                    book. It has survived not only five centuries, but also
-                    the leap into electronic typesetting, remaining essentially
-                    unchanged. It was popularised in the 1960s with the release
-                    of Letraset sheets containing Lorem Ipsum passages, and more
-                    recently with desktop publishing software like Aldus
-                    PageMaker including versions of Lorem Ipsum
-                </p>
-                <div class="btn-info">
-                    
-                    <button type="button">informasi Lebih Lanjut</button>
-                </div>
 
+        <div class="main">
+        <h3 class="heading">Tenaga Pengajar</h3>
+        <div class="container3">
+            <?php
+                            $guru = mysqli_query ($conn, "SELECT * FROM guru ORDER BY id DESC LIMIT 5");
+                            if (mysqli_num_rows($guru)> 0){
+                            while($e =mysqli_fetch_array($guru)){      
+            ?>    
+            <div class="card">
+                <img src="../guru/<?php echo $e['gambar'] ?>">
+                <div class="details">
+                    <h3><?= $e['nama']?></h3>
+                    <p><?= substr ($e['mapel'], 0,50 )?></p>
+                    <div class="social-links">
+                        <a href="#">Detail</a>
+                    </div>
+                </div>
             </div>
+
+                <?php }}else{?>
+                tidak ada
+                <?php } ?>
         </div>
-      
-    </section>
+    </div>
+
+
     
 
     <section id="blog">
@@ -99,7 +119,7 @@
             <div class="blog-detail">
                 <h4><?= substr ($e['judul'], 0,50 )?></h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, assumenda, provident ipsam obcaecati nesciunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident velit iure optio tempora quos quas rem voluptate aperiam, quidem dolorum. Debitis, recusandae id eaque laudantium porro iste ad commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam debitis amet placeat distinctio rerum veniam? Eveniet quod reprehenderit laborum mollitia repellendus deleniti inventore veniam veritatis vero repellat. Magni, minus est. </p>
-                <a href="#">Lanjutkan Membaca</a>
+                <a href="detail-informasi.php?id=<?= $e ['id'] ?>">Lanjutkan Membaca</a>
             </div>
 
 
@@ -112,30 +132,6 @@
     </section>
 
 
-    <div class="main">
-        <h3 class="heading">Tenaga Pengajar</h3>
-        <div class="container3">
-            <?php
-                            $guru = mysqli_query ($conn, "SELECT * FROM guru ORDER BY id DESC LIMIT 4");
-                            if (mysqli_num_rows($guru)> 0){
-                            while($e =mysqli_fetch_array($guru)){      
-            ?>    
-            <div class="card">
-                <img src="../guru/<?php echo $e['gambar'] ?>">
-                <div class="details">
-                    <h3><?= $e['nama']?></h3>
-                    <p><?= substr ($e['mapel'], 0,50 )?></p>
-                    <div class="social-links">
-                        <a href="#">Detail</a>
-                    </div>
-                </div>
-            </div>
-
-                <?php }}else{?>
-                tidak ada
-                <?php } ?>
-        </div>
-    </div>
 
 
 

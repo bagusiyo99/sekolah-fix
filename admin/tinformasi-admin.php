@@ -17,10 +17,11 @@
                         <tr>
                             <td>
                                 <label>Judul</label>
+                                
                                 <input class="tbl11" type="judul" name="judul" placeholder="judul informasi" required>
                             </td>
                         </tr>
-
+                        
                         <!-- <tr>
                             <td>
                                 <label>Keterangan</label>
@@ -47,7 +48,9 @@
                         
                         <div class= "form-group">
                             <label>Keterangan</label>
+                            <br><br>
                             <textarea id="mytextarea"  type="text"  name="keterangan" placeholder="keterangan informasi" required>  </textarea>
+                        <br><br>
                         </div>
 
 

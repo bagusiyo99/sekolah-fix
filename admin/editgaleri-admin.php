@@ -43,8 +43,10 @@
 
                     <div class= "form-group">
                             <label>Keterangan</label>
+                            <br><br>
                             <textarea id="mytextarea" type="text" name="keterangan" placeholder="keterangan informasi"  >  <?= $p -> keterangan ?></textarea>
-                    </div>
+                            <br><br>
+                        </div>
 
                         <tr>
                             <td colspan="2">

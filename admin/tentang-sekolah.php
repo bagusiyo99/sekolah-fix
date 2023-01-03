@@ -20,8 +20,10 @@
   
                         <div class= "form-group">
                             <label>Tentang Sekolah</label>
-                            <textarea id="mytextarea"  type="text" name="tentang" placeholder="Tentang Sekolah"> <?= $d ->tentang_sekolah ?> </textarea>
+                            <br><br>
+                            <textarea  id="mytextarea"  type="text" name="tentang" placeholder="Tentang Sekolah"> <?= $d ->tentang_sekolah ?> </textarea>
                         </div>
+                        <br>
 
                         <tr>
                             <td>
@@ -74,9 +76,9 @@ if(isset($_POST ['submit']))
                         if(!in_array($formatfile, $allowedtype)){
                         echo '<div class ="alert">format file tidak diizinkan.</div>';
                         return false;
-                    }elseif($filesize > 1000000){
-                        echo '<div class ="alert">ukuran file tidak boleh lebih dari 1 MB.</div>';
-                        return false;
+                    // }elseif($filesize > 1000000){
+                    //     echo '<div class ="alert">ukuran file tidak boleh lebih dari 1 MB.</div>';
+                    //     return false;
                     }else{
                         if(file_exists("../identitas/".$_POST['foto_lama'])){
                             unlink ("../identitas/".$_POST['foto_lama']);

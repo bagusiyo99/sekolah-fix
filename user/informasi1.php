@@ -16,7 +16,7 @@
             <div class="blog-detail">
                 <h4><?= substr ($e['judul'], 0,50 )?></h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, assumenda, provident ipsam obcaecati nesciunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident velit iure optio tempora quos quas rem voluptate aperiam, quidem dolorum. Debitis, recusandae id eaque laudantium porro iste ad commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam debitis amet placeat distinctio rerum veniam? Eveniet quod reprehenderit laborum mollitia repellendus deleniti inventore veniam veritatis vero repellat. Magni, minus est. </p>
-                <a href="#">Lanjutkan Membaca</a>
+                <a href="detail-informasi.php?id=<?= $e ['id'] ?> ">Lanjutkan Membaca</a>
             </div>
 
 

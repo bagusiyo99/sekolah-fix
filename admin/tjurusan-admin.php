@@ -22,8 +22,11 @@
                         </tr>
 
                         <div class= "form-group">
+                           
                             <label>Keterangan</label>
+                             <br><br>
                             <textarea id="mytextarea"  type="text"  name="keterangan" placeholder="keterangan jurusan" required>  </textarea>
+                        <br><br>
                         </div>
 
 

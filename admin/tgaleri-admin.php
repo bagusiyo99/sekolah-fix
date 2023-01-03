@@ -16,8 +16,11 @@
                     <table>
 
                         <div class= "form-group">
+                            
                             <label>Keterangan</label>
+                            <br><br>
                             <textarea id="mytextarea"  type="text"  name="keterangan" placeholder="keterangan gambar" required>  </textarea>
+                        <br><br>
                         </div>
 
 

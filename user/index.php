@@ -19,9 +19,44 @@
 
     </div> -->
 
-        <div class ="garis">
-        <h3 class="heading1">Tentang</h3>
+    <section id="fitur" class="section-p2 ">
+        <div class="fe-box">
+            <a href="jurusan.php">
+            <img src="../img/features/f1.png" alt="">
+            <h6> Kurikulum </h6>
+            </a>
         </div>
+
+        <div class="fe-box" >
+            <img src="../img/features/f2.png" alt="">
+            <h6> Prestasi </h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="../img/features/rice.png" alt="">
+            <h6> Akreditasi </h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="../img/features/f4.png" alt="">
+            <h6> Info Pembayaran</h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="../img/features/f5.png" alt="">
+            <h6> Alumni </h6>
+        </div>
+
+        <div class="fe-box">
+            <img src="../img/features/f6.png" alt="">
+            <h6> Bantuan </h6>
+        </div>
+    </section>
+
+
+        <!-- <div class ="garis">
+        <h3 class="heading1">Tentang</h3>
+        </div> -->
     <section class="info">
         <div class="main-info">
             <!-- <img src="../img/aset/sekolah.jpg"> -->
@@ -32,10 +67,10 @@
                 <h1>SMKN BAGUS BANDAR LAMPUNG</h1>
                 <p><?= $d ->sambutan_kepsek ?>
                 </p>
-                <div class="btn-info">
+                <!-- <div class="btn-info">
                     
                     <button type="button">informasi Lebih Lanjut</button>
-                </div>
+                </div> -->
 
             </div>
         </div>

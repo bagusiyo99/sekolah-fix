@@ -1,6 +1,17 @@
-   <?php include ('header.php'); ?>
-   
-   <section id="blog">
+    <?php include ('header.php'); ?>
+
+    <section id="page-header" class="blog-header">
+
+
+        <h2>#Order Sekarang </h2>
+        <p> Simpan Kupon Dan Dapatkan 70% Diskon</p>
+
+
+    </section>
+
+
+
+    <section id="blog">
         <?php
                             $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC");
                             if (mysqli_num_rows($informasi)> 0){
@@ -8,7 +19,6 @@
             ?>     
 
         <div class="blog-box">
-             
 
             <div class="blog-img">
                 <img src="../informasi/<?php echo $e['gambar'] ?>">

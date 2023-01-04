@@ -60,8 +60,8 @@
 
 .banner {
     padding: 0px 80px;
-    background-image: url("../identitas/sekolah1672747364.jpg");
-    height: 90vh;
+    background-image: url("../img/aset/ss.png");
+    height: 80vh;
     width: 100%;
     background-size: cover;
     background-position: top 75% right 0;
@@ -78,9 +78,16 @@
 .banner-text h3 {
     font-size: 45px;
     padding-bottom: 5px;
+    color: rgb(188, 7, 7);
 }
 
-/*jurusan */
+.banner-text p {
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: rgb(5, 5, 5);
+}
+
+/*detail jurusan */
 .section {
     padding: 50px 0;
     text-align: center;
@@ -89,6 +96,7 @@
 .section h3 {
     padding-bottom: 25px;
     margin-bottom: 30px;
+    color: black;
     position: relative;
 }
 
@@ -254,7 +262,7 @@
     padding: 40px 80px;
 }
 
-/* blog informasi user*/
+/* blog informasi index*/
 #blog {
     padding: 0px 150px 0 100px;
 }
@@ -313,6 +321,69 @@
 }
 
 #blog .blog-detail a:hover::after {
+    background-color: #227C70;
+}
+
+
+/* blog informasi user*/
+#blog1 {
+    padding: 0px 150px 0 100px;
+}
+
+#blog1 .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+#blog1 .blog-img {
+    width: 60%;
+    margin-right: 40px;
+}
+
+#blog1 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#blog1 .blog-detail1 {
+    width: 70%;
+}
+
+#blog1 .blog-detail1 h4 {
+    margin-bottom: 20px;
+}
+
+#blog1 .blog-detail1 p {
+    margin-bottom: 20px;
+}
+
+#blog1 .blog-detail1 a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    font-weight: 700;
+    position: relative;
+    margin-top: 25px;
+}
+
+#blog1 .blog-detail1 a::after {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 8px;
+    right: -60px;
+}
+
+#blog1 .blog-detail1 a:hover {
+    color: #227C70;
+}
+
+#blog1 .blog-detail1 a:hover::after {
     background-color: #227C70;
 }
 
@@ -707,72 +778,6 @@
     background-color: rgb(255, 0, 25);
 }
 
-@media screen and (max-width :1250px) {
-
-
-
-    /* sambutan */
-    .info {
-        width: 100%;
-        height: auto;
-        padding: 60ppx 0;
-        margin-top: 20px;
-    }
-
-    .tulis {
-        width: 90%;
-        margin-top: 40px;
-        margin-left: 80px;
-    }
-
-    /* akhir sambutan */
-}
-
-@media screen and (max-width :650px) {
-    main-info {
-        width: 100%;
-        height: auto;
-        padding: 60ppx 0;
-        margin-top: 20px;
-    }
-
-    .tulis {
-        width: 90%;
-        margin-top: 40px;
-    }
-}
-
-@media screen and (max-width :440px) {
-    .info {
-        width: 100%;
-        height: auto;
-        padding: 60ppx 0;
-        margin-top: 20px;
-    }
-
-    .tulis {
-        width: 90%;
-        margin-top: 40px;
-        margin-right: 40px;
-    }
-
-    #fitur {
-        display: block;
-        align-items: center;
-    }
-
-    .section-p2 {
-        padding: 0px 120px;
-        margin-top: 60px;
-    }
-
-    .la-bars:before {
-        content: "\f0c9";
-        margin-right: 20px;
-    }
-
-}
-
 /* navbar */
 .navbar1 {
     display: flex;
@@ -816,14 +821,14 @@
 }
 
 .list li a:hover {
-    color: rgb(223, 202, 9);
+    color: rgb(223, 166, 9);
 }
 
 
 /* page informasi */
 
 #page-header {
-    background-image: url("../img/banner/b1.jpg");
+    background-image: url("../img/aset/ss.png");
     width: 100%;
     height: 40vh;
     background-size: cover;
@@ -832,15 +837,16 @@
     text-align: center;
     flex-direction: column;
     padding: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 #page-header h2 {
-    color: white;
+    color: rgb(225, 9, 9);
+    padding-bottom: 10px;
 }
 
 #page-header p {
-    color: orange;
+    color: #0A2647;
 }
 
 #pagination {
@@ -865,6 +871,50 @@
 #pagination a:hover {
     background-color: orange;
 }
+
+
+
+
+/* images galeri */
+
+/* images */
+
+.img-galeri {
+    width: 90%;
+    margin: 15px auto 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 30px;
+}
+
+
+.img-galeri img {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+.img-galeri img:hover {
+    transform: scale(0.8) rotate(-15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
+}
+
+/* .img-galeri a {
+    text-decoration: none;
+    width: 300px;
+    height: 350px;
+    background-color: #06283D;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+
+} */
+
+
 
 
 @media screen and (max-width :1250px) {
@@ -992,18 +1042,93 @@
     }
 
 
-    /* informasi user */
-
-    #blog {
-        padding: 0;
-    }
-
     .detail-jurusan p {
         margin-left: 5%;
         text-align: left;
-        width: 50%;
+        width: 90%;
         margin-top: 30px;
     }
+
+    .huruf {
+        font-size: 50px;
+        padding: 0px 20px;
+        text-align: justify;
+    }
+
+    /* informasi index */
+
+    .main .heading {
+        font-size: 25px;
+        margin: 30px;
+        position: relative;
+    }
+
+    #blog .blog-box {
+        display: block;
+        align-items: center;
+        width: 160%;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+
+    #blog .blog-detail h4 {
+        padding-left: 35px;
+    }
+
+    #blog .blog-detail p {
+        width: 110%;
+        margin-left: 35px;
+    }
+
+    #blog .blog-detail a {
+        padding-bottom: 90px;
+        margin-left: 35px;
+    }
+
+    #blog img {
+        width: 160%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+
+    /* informasi user */
+    #blog1 {
+        padding: 0px 10px 0 15px;
+    }
+
+
+    #blog1 .blog-box {
+        display: block;
+        align-items: center;
+        width: 100%;
+        /* padding: 10px; */
+        margin-top: 20px;
+    }
+
+
+    #blog1 .blog-detail1 h4 {
+        padding-left: 35px;
+    }
+
+    #blog1 .blog-detail1 p {
+        width: 110%;
+        margin-left: 35px;
+    }
+
+    #blog1 .blog-detail1 a {
+        padding-bottom: 90px;
+        margin-left: 35px;
+    }
+
+    #blog1 img {
+        width: 160%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+
 
 }
 
@@ -1028,7 +1153,7 @@
     .detail-jurusan p {
         margin-left: 5%;
         text-align: left;
-        width: 50%;
+        width: 80%;
         margin-top: 30px;
     }
 }
@@ -1054,7 +1179,7 @@
     .detail-jurusan p {
         margin-left: 5%;
         text-align: left;
-        width: 50%;
+        width: 80%;
         margin-top: 30px;
     }
 }

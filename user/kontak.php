@@ -1,5 +1,15 @@
 <?php include ('header.php'); ?>
 
+    <section id="page-header" class="blog-header">
+
+
+        <h2>Welcome </h2>
+        <p> Simpan Kupon Dan Dapatkan 70% Diskon</p>
+
+
+    </section>
+
+
 <section id="contact-details" class="section-p1">
         <div class="details">
             <span>  <?= $d-> alamat ?> </span>

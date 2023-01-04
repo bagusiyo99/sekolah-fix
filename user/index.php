@@ -8,55 +8,41 @@
     </div>
 
 
-<!-- 
-    <div class="section">
-        <div class="container12 ">
-            <h3>Sambutan Kepala Sekolah</h3>
-            <img src="../identitas/<?=$d->foto_kepsek?>" width="100px">
-            <h4><?= $d ->nama_kepsek ?></h4>
-            <p> <?= $d ->sambutan_kepsek ?></p>
-        </div>
-
-    </div> -->
-
     <section id="fitur" class="section-p2 ">
         <div class="fe-box">
             <a href="jurusan.php">
-            <img src="../img/features/f1.png" alt="">
+            <img src="../img/icon/8.png" alt="">
             <h6> Kurikulum </h6>
             </a>
         </div>
 
         <div class="fe-box" >
-            <img src="../img/features/f2.png" alt="">
+            <img src="../img/icon/3.png" alt="">
             <h6> Prestasi </h6>
         </div>
 
         <div class="fe-box">
-            <img src="../img/features/rice.png" alt="">
+            <img src="../img/icon/4.png" alt="">
             <h6> Akreditasi </h6>
         </div>
 
         <div class="fe-box">
-            <img src="../img/features/f4.png" alt="">
+            <img src="../img/icon/1.png" alt="">
             <h6> Info Pembayaran</h6>
         </div>
 
         <div class="fe-box">
-            <img src="../img/features/f5.png" alt="">
+            <img src="../img/icon/6.png" alt="">
             <h6> Alumni </h6>
         </div>
 
         <div class="fe-box">
-            <img src="../img/features/f6.png" alt="">
+            <img src="../img/icon/5.png" alt="">
             <h6> Bantuan </h6>
         </div>
     </section>
 
 
-        <!-- <div class ="garis">
-        <h3 class="heading1">Tentang</h3>
-        </div> -->
     <section class="info">
         <div class="main-info">
             <!-- <img src="../img/aset/sekolah.jpg"> -->
@@ -138,28 +124,23 @@
 
     <section id="blog">
         <div class="main">
-         <h3 class="heading">Informasi Terbaru</h3>
+            <h3 class="heading">Informasi Terbaru</h3>
         <?php
                             $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC LIMIT 2");
                             if (mysqli_num_rows($informasi)> 0){
                             while($e =mysqli_fetch_array($informasi)){      
             ?>     
 
-        <div class="blog-box">
-             
-
-            <div class="blog-img">
-                <img src="../informasi/<?php echo $e['gambar'] ?>">
+            <div class="blog-box">
+                    <div class="blog-img">
+                        <img src="../informasi/<?php echo $e['gambar'] ?>">
+                    </div>
+                    <div class="blog-detail">
+                        <h4><?= substr ($e['judul'], 0,50 )?></h4>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, assumenda, provident ipsam obcaecati nesciunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident velit iure optio tempora quos quas rem voluptate aperiam, quidem dolorum. Debitis, recusandae id eaque laudantium porro iste ad commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam debitis amet placeat distinctio rerum veniam? Eveniet quod reprehenderit laborum mollitia repellendus deleniti inventore veniam veritatis vero repellat. Magni, minus est. </p>
+                        <a href="detail-informasi.php?id=<?= $e ['id'] ?>">Lanjutkan Membaca</a>
+                    </div>  
             </div>
-            <div class="blog-detail">
-                <h4><?= substr ($e['judul'], 0,50 )?></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, assumenda, provident ipsam obcaecati nesciunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident velit iure optio tempora quos quas rem voluptate aperiam, quidem dolorum. Debitis, recusandae id eaque laudantium porro iste ad commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam debitis amet placeat distinctio rerum veniam? Eveniet quod reprehenderit laborum mollitia repellendus deleniti inventore veniam veritatis vero repellat. Magni, minus est. </p>
-                <a href="detail-informasi.php?id=<?= $e ['id'] ?>">Lanjutkan Membaca</a>
-            </div>
-
-
-            
-        </div>
         <?php }}else{?>
                 tidak ada
                 <?php } ?>

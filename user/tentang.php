@@ -8,15 +8,22 @@
 
         </div>
 </div> -->
+    <section id="page-header" class="blog-header">
 
-<div class="section">
+
+        <h2>Selamat Datang</h2>
+        <p> Sejarah SMKN Bagus Bandar Lampung</p>
+
+
+    </section>
+
+    <div class="main">
+                <h3 class="heading">Tenaga Sekolah</h3>
+
         <div class="detail-tentang">
-
-            <h3 > Tentang Sekolah</h3>
                 <img src="../identitas/<?php echo $d-> foto_sekolah ?>" width="500px" height="400px">
         </div>
-
-</div>
+    </div>
 
   <div  class="huruf">
             <p font-size ="20px"> <?= $d-> tentang_sekolah ?></p>

@@ -78,8 +78,8 @@ if(isset($_POST ['submit']))
                         if(!in_array($formatfile, $allowedtype)){
                                         echo '<div class="alert">format tidak diizinkan </div>';
 
-                        }elseif ($filesize > 1000000){
-                        echo '<div class="alert">Ukuran file tidak boleh lebih dari 1mb </div>';
+                        // }elseif ($filesize > 1000000){
+                        // echo '<div class="alert">Ukuran file tidak boleh lebih dari 1mb </div>';
 
                         }else{
                         move_uploaded_file ($tmpname, "../informasi/".$rename);

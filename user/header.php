@@ -23,7 +23,7 @@
 <body>
     
  <nav class="navbar1">
-        <a href="" class="logo">LOGO</a>
+        <a href="" class="logo">SMKN BAGUS</a>
         <input type="checkbox" id="toggler">
         <label for="toggler"> <i class="las la-bars"></i></label>
         <div class="menu">

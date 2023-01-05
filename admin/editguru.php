@@ -85,13 +85,6 @@ if(isset($_POST ['submit']))
 
                         $allowedtype= array ('png', 'jpg', 'jpeg', 'gift');
 
-                         if(!in_array($formatfile, $allowedtype)){
-                            echo '<div class="alert">format tidak diizinkan </div>';
-
-                        }elseif ($filesize > 1000000){
-                        echo '<div class="alert">Ukuran file tidak boleh lebih dari 1mb </div>';
-
-                        }
                         if(file_exists("../guru/".$_POST['gambar2'])){
 
                             unlink ("../guru/".$_POST['gambar2']);
@@ -108,6 +101,7 @@ if(isset($_POST ['submit']))
                                     nama='".$nama."',
                                     mapel ='".$map."',
                                     gambar='".$rename."'
+                                    WHERE id = '".$_GET ['id']."'
                                     ");
 
                                     if($update){

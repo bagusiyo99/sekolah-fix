@@ -82,8 +82,8 @@
                 </div>
                 <div class="card-description">
                     <h3><?= $j['nama']?></h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="detail-jurusan.php?id=<?= $j ['id'] ?>" >Read More</a>
+                    <p><?= substr ($j['keterangan'], 0,50 )?></p>
+                    <a href="detail-jurusan.php?id=<?= $j ['id'] ?>" >Info Detail</a>
                 </div>
             </div>
 
@@ -136,8 +136,8 @@
                         <img src="../informasi/<?php echo $e['gambar'] ?>">
                     </div>
                     <div class="blog-detail">
-                        <h4><?= substr ($e['judul'], 0,50 )?></h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, assumenda, provident ipsam obcaecati nesciunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem provident velit iure optio tempora quos quas rem voluptate aperiam, quidem dolorum. Debitis, recusandae id eaque laudantium porro iste ad commodi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam debitis amet placeat distinctio rerum veniam? Eveniet quod reprehenderit laborum mollitia repellendus deleniti inventore veniam veritatis vero repellat. Magni, minus est. </p>
+                        <h4><?= $e['judul']?></h4>
+                        <p><?= substr ($e['keterangan'], 0,150 )?></p>
                         <a href="detail-informasi.php?id=<?= $e ['id'] ?>">Lanjutkan Membaca</a>
                     </div>  
             </div>

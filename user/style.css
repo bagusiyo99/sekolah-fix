@@ -120,18 +120,18 @@
 
 .section p {
     width: 80%;
-    text-align: left;
+    text-align: justify;
 }
 
 .detail-jurusan p {
     margin-left: 25%;
-    text-align: left;
+    text-align: justify;
     width: 50%;
     margin-top: 30px;
 }
 
 .detail-tentang p {
-    text-align: center;
+    text-align: justify;
     margin-left: 70px;
     width: 50%;
     margin-top: 30px;
@@ -149,6 +149,8 @@
 
 .huruf p {
     font-size: 17px;
+    text-align: justify;
+
 
 }
 
@@ -291,10 +293,17 @@
 
 #blog .blog-detail h4 {
     margin-bottom: 20px;
+    font-size: 20px;
+    text-align: justify;
+
 }
 
 #blog .blog-detail p {
     margin-bottom: 20px;
+    font-size: 16px;
+    text-align: justify;
+
+
 }
 
 #blog .blog-detail a {
@@ -353,7 +362,7 @@
 }
 
 #blog1 .blog-detail1 h4 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -598,6 +607,71 @@
     opacity: 0.8;
 }
 
+
+
+/* galeriuser */
+.galeri {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kenangan {
+    width: 400px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #243763;
+    margin: 20px;
+    transition: all 0.3s;
+}
+
+.card-galeri {
+    width: 100%;
+    height: 200px;
+}
+
+.card-galeri img {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    border-radius: 5px 5px 0 0;
+    transition: all 0.3s;
+}
+
+.galeri-description {
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    border-radius: 0 0 5px 5px;
+    padding: 55px;
+}
+
+
+
+.galeri-description p {
+    color: #243763;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px;
+}
+
+
+
+.kenangan:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px -5px #227C70
+}
+
+.card-image img:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
 /* sambutan-user */
 .info {
     width: 100%;
@@ -614,8 +688,8 @@
     width: 500px;
     max-width: 100%;
     height: 500px;
-    border-top: 5px solid #FF6E31;
-    border-left: 5px solid #FF6E31;
+    /* border-top: 5px solid #FF6E31;
+    border-left: 5px solid #FF6E31; */
 }
 
 
@@ -624,6 +698,7 @@
     width: 800px;
     max-width: 100%;
     padding: 0 5px;
+
 }
 
 .main-info {
@@ -651,11 +726,14 @@
     font-size: 30px;
     font-weight: 100;
     margin-bottom: 10px;
+    color: #FF6E31;
 }
 
 .tulis p {
-    font-size: 15px;
+    font-size: 12px;
     margin-bottom: 15px;
+    text-align: justify;
+    font-weight: 500px;
 }
 
 .btn-info button {
@@ -672,41 +750,6 @@
 
 }
 
-/* detail-jurusan user */
-/* .detail-jurusan {
-    width: 100%;
-}
-
-.detail-jurusan h3 {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 17px;
-}
-
-.detail-jurusan p {
-    text-align: center;
-}
-
-.detail-jurusan img {
-    width: 500px;
-    height: 400px;
-    text-align: center;
-}
-
-.garis1 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: pop;
-    padding: 50px 0 20px 0;
-}
-
-.garis1 .heading2 {
-    font-size: 25px;
-    margin-bottom: 50px;
-    position: relative;
-} */
 
 /* ###### fitur ######## */
 #fitur {
@@ -856,7 +899,7 @@
 }
 
 #page-header h2 {
-    color: rgb(225, 9, 9);
+    color: #FF6E31;
     padding-bottom: 10px;
 }
 
@@ -893,7 +936,7 @@
 /* images galeri */
 
 /* images */
-
+/* 
 .img-galeri {
     width: 90%;
     margin: 15px auto 50px;
@@ -915,7 +958,7 @@
     transform: scale(0.8) rotate(-15deg);
     border-radius: 20px;
     box-shadow: 0 32px 7px rgba(68, 77, 136, 0.2);
-}
+} */
 
 /* .img-galeri a {
     text-decoration: none;
@@ -1156,6 +1199,44 @@
 
 
 }
+
+/* galeri */
+div.gallery {
+    margin: 25px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    padding: 0px 20px 0px 20px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 600px;
+    height: 400px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
 
 
 @media screen and (max-width :390px) {

@@ -55,7 +55,7 @@
                     <a href="">Pengaturan <i class="las la-sort-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="identitas-admin.php"> indentitas sekolah</a></li>
-                        <li><a href="tentang-sekolah.php"> Tentang Sekolaj</a></li>
+                        <li><a href="tentang-sekolah.php"> Tentang Sekolah</a></li>
                         <li><a href="kepala-sekolah.php"> Sambutan</a></li>
                     </ul>
                 </li>

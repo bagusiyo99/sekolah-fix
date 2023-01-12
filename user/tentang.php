@@ -18,7 +18,7 @@
     </section>
 
     <div class="main">
-                <h3 class="heading">Tenaga Sekolah</h3>
+                <h3 class="heading">Tentang Sekolah</h3>
 
         <div class="detail-tentang">
                 <img src="../identitas/<?php echo $d-> foto_sekolah ?>" width="500px" height="400px">

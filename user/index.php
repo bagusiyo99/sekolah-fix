@@ -82,7 +82,7 @@
                 </div>
                 <div class="card-description">
                     <h3><?= $j['nama']?></h3>
-                    <p><?= substr ($j['keterangan'], 0,50 )?></p>
+                    <p><?= substr ($j['keterangan'], 0,50 )?>.....</p>
                     <a href="detail-jurusan.php?id=<?= $j ['id'] ?>" >Info Detail</a>
                 </div>
             </div>
@@ -137,7 +137,7 @@
                     </div>
                     <div class="blog-detail">
                         <h4><?= $e['judul']?></h4>
-                        <p><?= substr ($e['keterangan'], 0,150 )?></p>
+                        <p><?= substr ($e['keterangan'], 0,200 )?>..........</p>
                         <a href="detail-informasi.php?id=<?= $e ['id'] ?>">Lanjutkan Membaca</a>
                     </div>  
             </div>

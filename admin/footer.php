@@ -1,5 +1,5 @@
  <footer>
-        <p><?= $d ->nama ?><br>
+        <p> SMKN BAGUS BANDAR LAMPUNG<br>
     </footer>
 
 </body>

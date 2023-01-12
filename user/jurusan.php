@@ -27,7 +27,7 @@
                 </div>
                 <div class="card-description">
                     <h3><?= $j['nama']?></h3>
-                    <p><?= substr ($j['keterangan'], 0,50 )?></p>
+                    <p><?= substr ($j['keterangan'], 0,50 )?>.....</p>
                     <a href="detail-jurusan.php?id=<?= $j ['id'] ?>" >Info Detail</a>
                 </div>
             </div>

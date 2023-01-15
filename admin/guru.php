@@ -52,7 +52,7 @@
 					            <td><?php echo $p['nama']; ?></td>
 					            <td width="200"><?php echo $p['mapel']; ?></td>
 					            <td><img src="../guru/<?php echo $p['gambar'] ?>" width="400" height="300"></td>
-                                <td width="200">
+                                <td width="100 text-center">
                                     <a href="editguru.php?id=<?= $p ['id']?>" ><i class="las la-edit  la-2x lasi"></i> </a>
                                     <br><br>
                                     <a href="hpsguru.php?idguru=<?= $p ['id']?>"><i class="las la-trash-alt  la-2x lasii" onclick="return confirm ('Yakin ingin Hapus')"></i>    </a>

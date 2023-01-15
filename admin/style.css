@@ -556,11 +556,11 @@ footer p {
 .table1 th,
 .table1 td {
     border: 1px solid rgb(209, 208, 208);
-    text-align: justify;
+    text-align: center;
 }
 
 .table tr td {
-    text-align: justify;
+    text-align: center;
 }
 
 .btnprimary03 {

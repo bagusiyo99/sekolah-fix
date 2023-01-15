@@ -11,33 +11,33 @@
     <section id="fitur" class="section-p2 ">
         <div class="fe-box">
             <a href="jurusan.php">
-            <img src="../img/icon/8.png" alt="">
+            <img src="../img/icon/1.jpg" alt="">
             <h6> Kurikulum </h6>
             </a>
         </div>
 
         <div class="fe-box" >
-            <img src="../img/icon/3.png" alt="">
+            <img src="../img/icon/2.jpg" alt="">
             <h6> Prestasi </h6>
         </div>
 
         <div class="fe-box">
-            <img src="../img/icon/4.png" alt="">
+            <img src="../img/icon/3.jpg" alt="">
             <h6> Akreditasi </h6>
         </div>
 
         <div class="fe-box">
-            <img src="../img/icon/1.png" alt="">
+            <img src="../img/icon/4.jpg" alt="">
             <h6> Info Pembayaran</h6>
         </div>
 
         <div class="fe-box">
-            <img src="../img/icon/6.png" alt="">
+            <img src="../img/icon/6.jpg" alt="">
             <h6> Alumni </h6>
         </div>
 
         <div class="fe-box">
-            <img src="../img/icon/5.png" alt="">
+            <img src="../img/icon/5.jpg" alt="">
             <h6> Bantuan </h6>
         </div>
     </section>
@@ -95,7 +95,7 @@
 
 
         <div class="main">
-        <h3 class="heading">Tenaga Pengajar</h3>
+        <h3 class="heading">Guru</h3>
         <div class="container3">
             <?php
                             $guru = mysqli_query ($conn, "SELECT * FROM guru ORDER BY id DESC LIMIT 5");
@@ -124,7 +124,7 @@
 
     <section id="blog">
         <div class="main">
-            <h3 class="heading">Informasi Terbaru</h3>
+            <h3 class="heading">Informasi </h3>
         <?php
                             $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC LIMIT 2");
                             if (mysqli_num_rows($informasi)> 0){

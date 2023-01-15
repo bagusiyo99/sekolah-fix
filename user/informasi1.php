@@ -13,7 +13,7 @@
 
     <section id="blog">
         <div class="main">
-            <h3 class="heading">Informasi Terbaru</h3>
+            <h3 class="heading">Informasi</h3>
         <?php
                             $informasi = mysqli_query ($conn, "SELECT * FROM informasi ORDER BY id DESC ");
                             if (mysqli_num_rows($informasi)> 0){

@@ -21,10 +21,10 @@
             ?>     
 
             <div class="blog-box">
-                    <div class="blog-img">
+                    <div class="blog-img" data-aos="zoom-in-right"  data-aos-duration="3500" >
                         <img src="../informasi/<?php echo $e['gambar'] ?>">
                     </div>
-                    <div class="blog-detail">
+                    <div class="blog-detail"  data-aos="zoom-in-left"  data-aos-duration="3500">
                         <h4><?= $e['judul']?></h4>
                         <p><?= substr ($e['keterangan'], 0,200 )?>..........</p>
                         <a href="detail-informasi.php?id=<?= $e ['id'] ?>">Lanjutkan Membaca</a>
@@ -38,3 +38,4 @@
 
     <!-- class="section-p1"> (class untuk mengatur jarak) -->
 
+<?php include ('footer1.php'); ?>

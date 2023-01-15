@@ -53,7 +53,7 @@
                                 ?>
             <div class="kenangan">
                 
-                <div class="card-galeri">
+                <div class="card-galeri" data-aos="zoom-in-down" data-aos-duration="2500">
                     <a href="../galeri/<?= $p ['foto'] ?> ">
                         <img src="../galeri/<?php echo $p['foto'] ?>">
                     </a>
@@ -68,3 +68,5 @@
                 <?php } ?>
         </div>
     </div>
+
+    <?php include ('footer1.php'); ?>

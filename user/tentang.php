@@ -20,8 +20,10 @@
     <div class="main">
                 <h3 class="heading">Tentang Sekolah</h3>
 
-        <div class="detail-tentang">
-                <img src="../identitas/<?php echo $d-> foto_sekolah ?>" width="500px" height="400px">
+        <div class="detail-tentang" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="7500">
+                <img src="../identitas/<?php echo $d-> foto_sekolah ?>" width="900px" height="500px">
         </div>
     </div>
 
@@ -30,14 +32,14 @@
         </div>
 
     <div class="main">
-        <h3 class="heading">Tenaga Pengajar</h3>
+        <h3 class="heading">Guru</h3>
         <div class="container3">
             <?php
                             $guru = mysqli_query ($conn, "SELECT * FROM guru ORDER BY id DESC ");
                             if (mysqli_num_rows($guru)> 0){
                             while($e =mysqli_fetch_array($guru)){      
             ?>    
-            <div class="card">
+            <div class="card" data-aos="zoom-in" data-aos-duration="3500">
                 <img src="../guru/<?php echo $e['gambar'] ?>">
                 <div class="details">
                     <h3><?= $e['nama']?></h3>
@@ -54,3 +56,4 @@
         </div>
     </div>
 
+<?php include ('footer1.php'); ?>

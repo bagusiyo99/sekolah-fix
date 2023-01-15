@@ -8,7 +8,9 @@
     </div>
 
 
-    <section id="fitur" class="section-p2 ">
+    <section id="fitur" class="section-p2 "  data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="4500">
         <div class="fe-box">
             <a href="jurusan.php">
             <img src="../img/icon/1.jpg" alt="">
@@ -44,11 +46,10 @@
 
 
     <section class="info">
-        <div class="main-info">
-            <!-- <img src="../img/aset/sekolah.jpg"> -->
+        <div class="main-info" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
             <img src="../identitas/<?=$d->foto_kepsek?>" height="300px">
 
-            <div class="tulis">
+            <div class="tulis" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="150">
                 <h4><?= $d ->nama_kepsek ?></h4>
                 <h1>SMKN BAGUS BANDAR LAMPUNG</h1>
                 <p><?= $d ->sambutan_kepsek ?>
@@ -73,7 +74,7 @@
                             if (mysqli_num_rows($jurusan)> 0){
                             while($j =mysqli_fetch_array($jurusan)){      
             ?>
-            <div class="card-jurusan">
+            <div class="card-jurusan" data-aos="zoom-in-down" data-aos-duration="2500" > 
                 
                 <div class="card-image">
                     <a href="detail-jurusan.php?id=<?= $j ['id'] ?> ">
@@ -102,7 +103,7 @@
                             if (mysqli_num_rows($guru)> 0){
                             while($e =mysqli_fetch_array($guru)){      
             ?>    
-            <div class="card">
+            <div class="card" data-aos="zoom-in" data-aos-duration="3500">
                 <img src="../guru/<?php echo $e['gambar'] ?>">
                 <div class="details">
                     <h3><?= $e['nama']?></h3>
@@ -132,10 +133,10 @@
             ?>     
 
             <div class="blog-box">
-                    <div class="blog-img">
+                    <div class="blog-img" data-aos="zoom-in-right"  data-aos-duration="3500" >
                         <img src="../informasi/<?php echo $e['gambar'] ?>">
                     </div>
-                    <div class="blog-detail">
+                    <div class="blog-detail" data-aos="zoom-in-left"  data-aos-duration="3500">
                         <h4><?= $e['judul']?></h4>
                         <p><?= substr ($e['keterangan'], 0,200 )?>..........</p>
                         <a href="detail-informasi.php?id=<?= $e ['id'] ?>">Lanjutkan Membaca</a>
@@ -151,3 +152,4 @@
 
 
 
+<?php include ('footer1.php'); ?>

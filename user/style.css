@@ -7,6 +7,17 @@
     font-family: 'Spartan', sans-serif;
 }
 
+/* footer */
+footer {
+    background-color: rgb(9, 9, 9);
+    text-align: center;
+    padding: 1%;
+    color: white;
+}
+
+footer p {
+    color: wheat;
+}
 
 /* khusus tampilan user */
 /* header-user */
@@ -60,7 +71,7 @@
 
 .banner {
     padding: 0px 80px;
-    background-image: url("../img/aset/mantap.jpg");
+    background-image: url("../img/aset/gedung.jpg");
     height: 100vh;
     width: 100%;
     background-size: cover;

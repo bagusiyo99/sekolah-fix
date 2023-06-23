@@ -4,3 +4,4 @@ instal program
 - import data sql yang ada
 - panel admin : admin@gmail.com | password : 12345
 - panel user : user@gmail.com | password : 12345
+php

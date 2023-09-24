@@ -1,4 +1,4 @@
-# Company profile menggunakan php
+ Company profile menggunakan php
 instal program
 - membuat database dengan nama db_sekolah
 - import data sql yang ada di file

@@ -1,3 +1,4 @@
+cara install
 - Company profile menggunakan php
 instal program
 - membuat database dengan nama db_sekolah
